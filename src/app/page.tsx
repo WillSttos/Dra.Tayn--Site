@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -183,25 +184,14 @@ export default function Home() {
         
         {/* Antes e Depois */}
         <section className="bg-card py-20 md:py-28">
-            <div className="container mx-auto px-6 flex flex-col lg:flex-row-reverse items-center gap-12">
-                <div className="lg:w-1/2 text-center lg:text-left">
+            <div className="container mx-auto px-6 flex flex-col items-center gap-12">
+                <div className="w-full text-center">
                     <p className="font-serif text-primary text-lg">Resultados Reais</p>
-                    <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-6">
+                    <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-8">
                         Resultados que transformam sorrisos
                     </h2>
-                    <p className="text-lg text-muted-foreground mb-8">
-                    Veja um exemplo do nosso trabalho dedicado. Cada paciente recebe
-                    um plano de tratamento personalizado para alcançar o melhor
-                    resultado possível, unindo saúde e estética.
-                    </p>
-                    <Button
-                        onClick={openWhatsapp}
-                        className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
-                    >
-                        Eu também quero transformar meu sorriso
-                    </Button>
                 </div>
-                <div className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="w-full lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {beforeAfterCases.map((caseItem) => (
                         caseItem.before && caseItem.after && (
                             <ImageCompareSlider
@@ -214,6 +204,19 @@ export default function Home() {
                             />
                         )
                     ))}
+                </div>
+                <div className="w-full text-center">
+                    <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                    Veja um exemplo do nosso trabalho dedicado. Cada paciente recebe
+                    um plano de tratamento personalizado para alcançar o melhor
+                    resultado possível, unindo saúde e estética.
+                    </p>
+                    <Button
+                        onClick={openWhatsapp}
+                        className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
+                    >
+                        Eu também quero transformar meu sorriso
+                    </Button>
                 </div>
             </div>
         </section>
