@@ -285,30 +285,30 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-[#E0A45E] text-white py-12">
+      <footer className="bg-gradient-to-r from-[#E0A45E] to-[#AE5E55] text-white py-12">
         <div className="container mx-auto px-6 text-center">
-          <a href="#" className="text-3xl font-bold text-primary font-serif">
+          <a href="#" className="text-3xl font-bold text-white font-serif">
             Dra. Tayná Magalhães
           </a>
-          <p className="text-gray-300 mt-2">
+          <p className="text-gray-200 mt-2">
             Esp. em Periodontia | Cirurgia Oral e Periodontal | Implantes
           </p>
-          <p className="text-gray-400 text-sm mt-1">CRO-BA 25109</p>
+          <p className="text-gray-300 text-sm mt-1">CRO-BA 25109</p>
           <div className="flex justify-center gap-6 my-6">
             <a
               href="#"
-              className="text-gray-300 hover:text-accent transition duration-300"
+              className="text-gray-200 hover:text-white transition duration-300"
             >
               <Instagram />
             </a>
             <a
               href="#"
-              className="text-gray-300 hover:text-accent transition duration-300"
+              className="text-gray-200 hover:text-white transition duration-300"
             >
               <Facebook />
             </a>
           </div>
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-400 text-sm">
             &copy; {new Date().getFullYear()} Dra. Tayná Magalhães. Todos os
             direitos reservados.
           </p>
