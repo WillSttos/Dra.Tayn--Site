@@ -285,7 +285,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-foreground text-white py-12">
+      <footer className="bg-[#AE5E55] text-white py-12">
         <div className="container mx-auto px-6 text-center">
           <a href="#" className="text-3xl font-bold text-primary font-serif">
             Dra. Tayná Magalhães
