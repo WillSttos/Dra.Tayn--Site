@@ -137,13 +137,11 @@ export default function Home() {
             <div className="max-w-xl text-white">
               <h1
                 className="text-4xl md:text-6xl font-bold font-serif leading-tight mb-6 text-gradient"
-                style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.3)' }}
               >
                 Recupere sua <em className="not-italic">autoestima</em> com o Sorriso dos Sonhos!
               </h1>
               <p
                 className="text-lg mb-8"
-                style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.5)' }}
               >
                 Oferecemos tratamentos periodontais e de implantes com a mais alta tecnologia, focados na sua saúde e bem-estar.
               </p>
