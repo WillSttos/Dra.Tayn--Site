@@ -141,8 +141,7 @@ export default function Home() {
                 Recupere sua <em>autoestima</em> com o Sorriso dos Sonhos!
               </h1>
               <p
-                className="text-lg mb-8"
-                style={{ color: '#ae5e55', textShadow: '1px 1px 2px rgba(255,255,255,0.7)' }}
+                className="text-lg text-secondary-foreground mb-8"
               >
                 Oferecemos <strong>tratamentos periodontais</strong> e de <strong>implantes</strong> com a mais <strong>alta tecnologia</strong>, focados na sua <strong>saúde e bem-estar</strong>.
               </p>
@@ -411,6 +410,8 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
 
