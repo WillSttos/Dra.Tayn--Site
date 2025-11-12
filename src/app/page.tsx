@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Instagram, Facebook, Star, Clock, MapPin, Phone } from 'lucide-react';
+import { Instagram, Facebook, Star, Clock, MapPin, Phone, Stethoscope, Scissors } from 'lucide-react';
 import Link from 'next/link';
 import {
   Card,
@@ -13,6 +13,25 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { ImageCompareSlider } from '@/components/ui/image-compare-slider';
+
+const ToothIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M9.953 3.141a2.23 2.23 0 0 1 4.094 0l.138.414a1.5 1.5 0 0 0 1.415 1.166h.455a2.5 2.5 0 0 1 2.5 2.5v.455a1.5 1.5 0 0 0 1.166 1.415l.414.138a2.23 2.23 0 0 1 0 4.094l-.414.138a1.5 1.5 0 0 0-1.166 1.415v.455a2.5 2.5 0 0 1-2.5 2.5h-.455a1.5 1.5 0 0 0-1.415 1.166l-.138.414a2.23 2.23 0 0 1-4.094 0l-.138-.414a1.5 1.5 0 0 0-1.415-1.166H7a2.5 2.5 0 0 1-2.5-2.5v-.455a1.5 1.5 0 0 0-1.166-1.415l-.414-.138a2.23 2.23 0 0 1 0-4.094l.414-.138a1.5 1.5 0 0 0 1.166-1.415V7.5a2.5 2.5 0 0 1 2.5-2.5h.455a1.5 1.5 0 0 0 1.415-1.166z" />
+      <path d="M14.5 13.5h-5" />
+      <path d="M12 11v5" />
+    </svg>
+);
 
 
 const whatsappUrl =
@@ -23,19 +42,19 @@ const specialties = [
     title: 'Periodontia',
     description:
       'Cuidamos da saúde das suas gengivas e das estruturas que sustentam seus dentes, prevenindo e tratando doenças como gengivite e periodontite.',
-    image: PlaceHolderImages.find(img => img.id === 'periodontia'),
+    icon: Stethoscope,
   },
   {
     title: 'Cirurgia Oral e Periodontal',
     description:
       'Procedimentos cirúrgicos com precisão e segurança, incluindo enxertos, cirurgias gengivais estéticas e extrações complexas.',
-    image: PlaceHolderImages.find(img => img.id === 'cirurgia'),
+    icon: Scissors,
   },
   {
     title: 'Implantes',
     description:
       'A solução definitiva para a perda de dentes. Devolvemos a função e a estética do seu sorriso com implantes dentários de titânio.',
-    image: PlaceHolderImages.find(img => img.id === 'implante'),
+    icon: ToothIcon,
   },
 ];
 
@@ -109,11 +128,12 @@ export default function Home() {
               src={heroBanner.imageUrl}
               alt={heroBanner.description}
               fill
-              className="object-cover object-center"
+              className="object-cover"
               data-ai-hint={heroBanner.imageHint}
               priority
             />
           )}
+           <div className="absolute inset-0 bg-black/30"></div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-xl text-white">
               <p className="text-xl mb-2 font-serif" style={{ color: 'hsl(var(--primary))' }}>
@@ -156,21 +176,13 @@ export default function Home() {
               {specialties.map((spec, index) => (
                 <Card
                   key={spec.title}
-                  className="bg-card rounded-2xl shadow-lg text-center border-t-4 border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 fade-in-up overflow-hidden"
+                  className="bg-card rounded-2xl shadow-lg text-center border-t-4 border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 fade-in-up"
                    style={{ animationDelay: `${index * 150}ms` }}
                 >
-                    {spec.image && (
-                      <div className="w-full h-48 relative">
-                        <Image
-                          src={spec.image.imageUrl}
-                          alt={spec.title}
-                          fill
-                          className="object-cover"
-                          data-ai-hint={spec.image.imageHint}
-                        />
+                    <div className="p-8 flex flex-col items-center">
+                      <div className="p-4 bg-primary/10 rounded-full mb-4">
+                        <spec.icon className="w-10 h-10 text-primary" />
                       </div>
-                    )}
-                    <div className="p-6">
                       <h3 className="text-xl font-bold font-serif text-secondary mb-3">
                           {spec.title}
                       </h3>
