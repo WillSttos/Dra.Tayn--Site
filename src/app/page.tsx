@@ -221,7 +221,7 @@ export default function Home() {
                 <div className="w-full lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {beforeAfterCases.map((caseItem, index) => (
                         caseItem.before && caseItem.after && (
-                          <AnimateOnScroll key={caseItem.id} delay={index * 0.15}>
+                          <AnimateOnScroll key={caseItem.id} delay={index * 0.15} direction={index % 2 === 0 ? 'left' : 'right'}>
                             <ImageCompareSlider
                                 before={caseItem.before.imageUrl}
                                 after={caseItem.after.imageUrl}
@@ -255,7 +255,7 @@ export default function Home() {
         {/* Sobre a Doutora */}
         <section id="sobre" className="py-20 md:py-28 bg-background">
           <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-            <AnimateOnScroll className="md:w-1/3 relative">
+            <AnimateOnScroll className="md:w-1/3 relative" direction="left">
                  <div className="absolute -top-4 -left-4 w-full h-full border-4 border-primary rounded-2xl transform -rotate-3"></div>
                 <Image
                     src={PlaceHolderImages[9].imageUrl}
@@ -267,7 +267,7 @@ export default function Home() {
                 />
             </AnimateOnScroll>
             <div className="md:w-2/3">
-              <AnimateOnScroll>
+              <AnimateOnScroll direction="right">
                 <p className="font-serif text-primary text-lg">Conheça a especialista</p>
                 <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4">
                     Dra. Tayná Magalhães
@@ -279,7 +279,7 @@ export default function Home() {
                     CRO-BA 25109
                 </p>
               </AnimateOnScroll>
-              <AnimateOnScroll delay={0.2}>
+              <AnimateOnScroll delay={0.2} direction="right">
                 <p className="text-muted-foreground mb-4">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -356,7 +356,7 @@ export default function Home() {
                     </div>
                 </AnimateOnScroll>
                 <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
-                    <AnimateOnScroll>
+                    <AnimateOnScroll direction="left">
                         <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4">
                             <MapPin className="text-primary mt-1" size={24}/>
                             <div>
@@ -376,7 +376,7 @@ export default function Home() {
                             </div>
                         </div>
                     </AnimateOnScroll>
-                     <AnimateOnScroll delay={0.2}>
+                     <AnimateOnScroll delay={0.2} direction="right">
                         <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4">
                             <Clock className="text-primary mt-1" size={24}/>
                             <div>

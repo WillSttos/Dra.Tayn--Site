@@ -8,6 +8,7 @@ interface Props {
   delay?: number;
   duration?: number;
   className?: string;
+  direction?: 'up' | 'left' | 'right';
 }
 
 const AnimateOnScroll = ({
@@ -15,13 +16,20 @@ const AnimateOnScroll = ({
   delay = 0,
   duration = 0.5,
   className,
+  direction = 'up',
 }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
+  const slideVariants = {
+    up: { y: 30, x: 0 },
+    left: { y: 0, x: -30 },
+    right: { y: 0, x: 30 },
+  };
+
   const variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, ...slideVariants[direction] },
+    visible: { opacity: 1, y: 0, x: 0 },
   };
 
   return (
