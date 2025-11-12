@@ -162,18 +162,18 @@ export default function Home() {
         {/* Especialidades */}
         <section id="especialidades" className="py-20 md:py-28 bg-background fade-in-up">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4 fade-in-up">
               Estética Odontológica Personalizada
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-16">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-16 fade-in-up" style={{ animationDelay: '150ms' }}>
              Nossas especialidades são focadas em devolver a função e a estética do seu sorriso.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {specialties.map((spec, index) => (
                 <Card
                   key={spec.title}
-                  className="bg-card rounded-2xl shadow-lg text-center border-t-4 border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
-                   style={{ animationDelay: `${index * 150}ms` }}
+                  className="bg-card rounded-2xl shadow-lg text-center border-t-4 border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 fade-in-up"
+                   style={{ animationDelay: `${index * 150 + 300}ms` }}
                 >
                     <div className="p-8 flex flex-col items-center">
                       <div className="p-4 bg-primary/10 rounded-full mb-4">
@@ -187,7 +187,7 @@ export default function Home() {
                 </Card>
               ))}
             </div>
-            <div>
+            <div className="fade-in-up" style={{ animationDelay: '600ms' }}>
               <Button
                 onClick={openWhatsapp}
                 className="mt-16 inline-block text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
@@ -202,15 +202,15 @@ export default function Home() {
         <section className="bg-card py-20 md:py-28 fade-in-up">
             <div className="container mx-auto px-6 flex flex-col items-center gap-12">
                 <div className="w-full text-center">
-                    <p className="font-serif text-primary text-lg">Resultados Reais</p>
-                    <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-8">
+                    <p className="font-serif text-primary text-lg fade-in-up">Resultados Reais</p>
+                    <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-8 fade-in-up" style={{ animationDelay: '150ms' }}>
                         Resultados que transformam sorrisos
                     </h2>
                 </div>
                 <div className="w-full lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {beforeAfterCases.map((caseItem, index) => (
                         caseItem.before && caseItem.after && (
-                          <div key={caseItem.id} style={{ animationDelay: `${index * 150}ms` }}>
+                          <div key={caseItem.id} className="fade-in-up" style={{ animationDelay: `${index * 150 + 300}ms` }}>
                             <ImageCompareSlider
                                 before={caseItem.before.imageUrl}
                                 after={caseItem.after.imageUrl}
@@ -222,7 +222,7 @@ export default function Home() {
                         )
                     ))}
                 </div>
-                <div className="w-full text-center">
+                <div className="w-full text-center fade-in-up" style={{ animationDelay: '600ms' }}>
                     <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
                     Veja um exemplo do nosso trabalho dedicado. Cada paciente recebe
                     um plano de tratamento personalizado para alcançar o melhor
@@ -242,7 +242,7 @@ export default function Home() {
         {/* Sobre a Doutora */}
         <section id="sobre" className="py-20 md:py-28 bg-background fade-in-up">
           <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/3 relative">
+            <div className="md:w-1/3 relative fade-in-up" style={{ animationDelay: '150ms' }}>
                  <div className="absolute -top-4 -left-4 w-full h-full border-4 border-primary rounded-2xl transform -rotate-3"></div>
                 <Image
                     src={PlaceHolderImages[9].imageUrl}
@@ -253,7 +253,7 @@ export default function Home() {
                     data-ai-hint={PlaceHolderImages[9].imageHint}
                 />
             </div>
-            <div className="md:w-2/3">
+            <div className="md:w-2/3 fade-in-up" style={{ animationDelay: '300ms' }}>
               <p className="font-serif text-primary text-lg">Conheça a especialista</p>
               <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4">
                 Dra. Tayná Magalhães
@@ -286,16 +286,16 @@ export default function Home() {
         {/* Depoimentos */}
         <section id="depoimentos" className="bg-card py-20 md:py-28 fade-in-up">
           <div className="container mx-auto px-6 text-center">
-            <p className="font-serif text-primary text-lg">Depoimentos</p>
-            <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-16">
+            <p className="font-serif text-primary text-lg fade-in-up">Depoimentos</p>
+            <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-16 fade-in-up" style={{ animationDelay: '150ms' }}>
               O que nossos pacientes dizem!
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <Card
                   key={index}
-                  className="bg-background p-8 rounded-2xl shadow-lg text-left"
-                  style={{ animationDelay: `${index * 150}ms` }}
+                  className="bg-background p-8 rounded-2xl shadow-lg text-left fade-in-up"
+                  style={{ animationDelay: `${index * 150 + 300}ms` }}
                 >
                   <CardHeader className="p-0 mb-4">
                     <div className="flex items-center">
@@ -317,11 +317,11 @@ export default function Home() {
         {/* Localização */}
         <section id="localizacao" className="py-20 md:py-28 text-center bg-background fade-in-up">
             <div className="container mx-auto px-6">
-                <p className="font-serif text-primary text-lg">Onde estamos</p>
-                <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-12">
+                <p className="font-serif text-primary text-lg fade-in-up">Onde estamos</p>
+                <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-12 fade-in-up" style={{ animationDelay: '150ms' }}>
                     Venha Conhecer Nossa Clínica!
                 </h2>
-                <div className="w-full h-96 rounded-2xl shadow-xl overflow-hidden mb-8">
+                <div className="w-full h-96 rounded-2xl shadow-xl overflow-hidden mb-8 fade-in-up" style={{ animationDelay: '300ms' }}>
                     <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.971339180709!2d-38.4593430851779!3d-12.97371199085449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b204e8b0001%3A0x8f2d5c3695d52044!2sSalvador%2C%20BA!5e0!3m2!1spt-BR!2sbr!4v1678888888888!5m2!1spt-BR!2sbr"
                     width="100%"
@@ -333,7 +333,7 @@ export default function Home() {
                     ></iframe>
                 </div>
                 <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
-                    <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4" style={{ animationDelay: '450ms' }}>
+                    <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4 fade-in-up" style={{ animationDelay: '450ms' }}>
                         <MapPin className="text-primary mt-1" size={24}/>
                         <div>
                             <h3 className="font-bold text-lg text-foreground">Endereço</h3>
@@ -351,7 +351,7 @@ export default function Home() {
                             </a>
                         </div>
                     </div>
-                     <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4" style={{ animationDelay: '600ms' }}>
+                     <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4 fade-in-up" style={{ animationDelay: '600ms' }}>
                         <Clock className="text-primary mt-1" size={24}/>
                         <div>
                             <h3 className="font-bold text-lg text-foreground">Horário de Funcionamento</h3>
@@ -369,7 +369,7 @@ export default function Home() {
 
       <footer className="bg-gradient-to-r from-[#E0A45E] to-[#AE5E55] text-white py-16">
         <div className="container mx-auto px-6 grid md:grid-cols-3 gap-10 text-center md:text-left">
-            <div>
+            <div className="fade-in-up">
                  <Link href="/" className="text-3xl font-bold text-white font-serif mb-4 inline-block">
                     Dra. Tayná Magalhães
                 </Link>
@@ -377,7 +377,7 @@ export default function Home() {
                     Recupere sua autoestima com o sorriso dos seus sonhos.
                 </p>
             </div>
-            <div>
+            <div className="fade-in-up" style={{ animationDelay: '150ms' }}>
                 <h4 className="font-bold text-lg mb-4 text-white">Navegação</h4>
                 <ul className="space-y-2">
                     {navLinks.map(link => (
@@ -387,7 +387,7 @@ export default function Home() {
                     ))}
                 </ul>
             </div>
-            <div>
+            <div className="fade-in-up" style={{ animationDelay: '300ms' }}>
                 <h4 className="font-bold text-lg mb-4 text-white">Redes Sociais</h4>
                  <div className="flex justify-center md:justify-start gap-6 mb-6">
                     <a
@@ -408,7 +408,7 @@ export default function Home() {
                 <p className="text-gray-200 text-sm">CRO-BA 25109</p>
             </div>
         </div>
-        <div className="container mx-auto px-6 mt-10 border-t border-gray-400 pt-8 text-center text-gray-200 text-sm">
+        <div className="container mx-auto px-6 mt-10 border-t border-gray-400 pt-8 text-center text-gray-200 text-sm fade-in-up" style={{ animationDelay: '450ms' }}>
              <p>
                 &copy; {new Date().getFullYear()} Dra. Tayná Magalhães. Todos os
                 direitos reservados.
