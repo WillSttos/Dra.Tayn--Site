@@ -59,6 +59,54 @@
       "description": "Retrato da Dra. Tayná Magalhães.",
       "imageUrl": "https://images.unsplash.com/photo-1632054226752-b1b40867f7a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZG9jdG9yJTIwcHJvZmVzc2lvbmFsfGVufDB8fHx8MTc2Mjg0NDQ3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "doctor professional"
+    },
+    {
+      "id": "antes-1",
+      "description": "Dentes antes do tratamento.",
+      "imageUrl": "https://images.unsplash.com/photo-1612283105368-36468f634599?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZWV0aCUyMGJlZm9yZXxlbnwwfHx8fDE3NjI4ODAyODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "teeth before"
+    },
+    {
+      "id": "depois-1",
+      "description": "Dentes depois do tratamento.",
+      "imageUrl": "https://images.unsplash.com/photo-1658994477987-42468f4dbbb2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGVldGglMjBhZnRlcnxlbnwwfHx8fDE3NjI4ODAyODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "teeth after"
+    },
+    {
+      "id": "antes-2",
+      "description": "Sorriso antes do tratamento.",
+      "imageUrl": "https://images.unsplash.com/photo-1711201459951-50f07e176367?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c21pbGUlMjBiZWZvcmV8ZW58MHx8fHwxNzYyOTUzNjEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smile before"
+    },
+    {
+      "id": "depois-2",
+      "description": "Sorriso depois do tratamento.",
+      "imageUrl": "https://images.unsplash.com/photo-1503254982526-046362731d66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzbWlsZSUyMGFmdGVyfGVufDB8fHx8MTc2Mjk1MzYxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smile after"
+    },
+    {
+      "id": "antes-3",
+      "description": "Gengiva antes do tratamento.",
+      "imageUrl": "https://images.unsplash.com/photo-1658847075814-bf9a341c91e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxndW1zJTIwYmVmb3JlfGVufDB8fHx8MTc2Mjk1MzYxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gums before"
+    },
+    {
+      "id": "depois-3",
+      "description": "Gengiva depois do tratamento.",
+      "imageUrl": "https://images.unsplash.com/photo-1660732205502-2c4dcd3af74d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxndW1zJTIwYWZ0ZXJ8ZW58MHx8fHwxNzYyOTUzNjEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gums after"
+    },
+    {
+      "id": "antes-4",
+      "description": "Implante antes da finalização.",
+      "imageUrl": "https://images.unsplash.com/photo-1752842350662-2479127ed490?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbXBsYW50JTIwYmVmb3JlfGVufDB8fHx8MTc2Mjk1MzYxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "implant before"
+    },
+    {
+      "id": "depois-4",
+      "description": "Implante após finalização.",
+      "imageUrl": "https://images.unsplash.com/photo-1631596647474-6b153ca43975?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbXBsYW50JTIwYWZ0ZXJ8ZW58MHx8fHwxNzYyOTUzNjEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "implant after"
     }
   ]
 }

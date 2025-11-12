@@ -84,4 +84,16 @@
       transform: translateY(0);
     }
   }
+  .image-compare-slider {
+    --position: 50%;
+  }
+  .image-compare-slider > .after-image {
+    clip-path: polygon(var(--position) 0, 100% 0, 100% 100%, var(--position) 100%);
+  }
+  .image-compare-slider > .slider-line {
+    left: var(--position);
+  }
+  .image-compare-slider > .slider-handle {
+    left: var(--position);
+  }
 }

@@ -11,6 +11,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { ImageCompareSlider } from '@/components/ui/image-compare-slider';
+
 
 const whatsappUrl =
   'https://api.whatsapp.com/send?phone=5571996485189&text=Ol%C3%A1%20vim%20pelo%20site,%20gostaria%20de%20agendar%20uma%20autoavalia%C3%A7%C3%A3o.';
@@ -59,6 +61,13 @@ const navLinks = [
     { href: "#sobre", label: "Sobre" },
     { href: "#depoimentos", label: "Depoimentos" },
     { href: "#localizacao", label: "Localização" },
+]
+
+const beforeAfterCases = [
+    { id: 'case-1', before: PlaceHolderImages.find(img => img.id === 'antes-1'), after: PlaceHolderImages.find(img => img.id === 'depois-1') },
+    { id: 'case-2', before: PlaceHolderImages.find(img => img.id === 'antes-2'), after: PlaceHolderImages.find(img => img.id === 'depois-2') },
+    { id: 'case-3', before: PlaceHolderImages.find(img => img.id === 'antes-3'), after: PlaceHolderImages.find(img => img.id === 'depois-3') },
+    { id: 'case-4', before: PlaceHolderImages.find(img => img.id === 'antes-4'), after: PlaceHolderImages.find(img => img.id === 'depois-4') },
 ]
 
 export default function Home() {
@@ -192,25 +201,18 @@ export default function Home() {
                         Eu também quero transformar meu sorriso
                     </Button>
                 </div>
-                <div className="lg:w-1/2 w-full grid grid-cols-2 gap-4">
-                     <Image
-                        src={PlaceHolderImages[4].imageUrl}
-                        alt="Imagem de Antes e Depois de um tratamento"
-                        width={600}
-                        height={400}
-                        className="rounded-2xl shadow-xl w-full h-auto object-cover col-span-2"
-                        data-ai-hint={PlaceHolderImages[4].imageHint}
-                        />
-                    {PlaceHolderImages.slice(5, 7).map((image) => (
-                        <Image
-                        key={image.id}
-                        src={image.imageUrl}
-                        alt={`Imagem de caso clínico ${image.id}`}
-                        width={400}
-                        height={400}
-                        className="rounded-2xl shadow-md w-full h-auto object-cover aspect-square"
-                        data-ai-hint={image.imageHint}
-                        />
+                <div className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {beforeAfterCases.map((caseItem) => (
+                        caseItem.before && caseItem.after && (
+                            <ImageCompareSlider
+                                key={caseItem.id}
+                                before={caseItem.before.imageUrl}
+                                after={caseItem.after.imageUrl}
+                                alt={`Comparativo do ${caseItem.id}`}
+                                beforeHint={caseItem.before.imageHint}
+                                afterHint={caseItem.after.imageHint}
+                            />
+                        )
                     ))}
                 </div>
             </div>
