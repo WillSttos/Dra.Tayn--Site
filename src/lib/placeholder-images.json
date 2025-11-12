@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "dra-tayn",
+      "description": "Foto da Dra. Tayná Magalhães sorrindo.",
+      "imageUrl": "https://images.unsplash.com/photo-1670190057256-076461959142?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkZW50aXN0JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYyODc4MzI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dentist portrait"
+    },
+    {
+      "id": "periodontia",
+      "description": "Ícone para periodontia.",
+      "imageUrl": "https://images.unsplash.com/photo-1615592602923-9fb437226763?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0b290aCUyMGd1bXN8ZW58MHx8fHwxNzYyOTUxMjExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tooth gums"
+    },
+    {
+      "id": "cirurgia",
+      "description": "Ícone para cirurgia oral.",
+      "imageUrl": "https://images.unsplash.com/photo-1643660527090-bea721ad71f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkZW50YWwlMjBzdXJnZXJ5fGVufDB8fHx8MTc2Mjk1MTIxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dental surgery"
+    },
+    {
+      "id": "implante",
+      "description": "Ícone para implante dentário.",
+      "imageUrl": "https://images.unsplash.com/photo-1468493858157-0da44aaf1d13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkZW50YWwlMjBpbXBsYW50fGVufDB8fHx8MTc2Mjg3ODMyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dental implant"
+    },
+    {
+      "id": "antes-depois",
+      "description": "Imagem de antes e depois de um tratamento dentário.",
+      "imageUrl": "https://images.unsplash.com/photo-1603044230372-9878e464c8e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiZWZvcmUlMjBhZnRlcnxlbnwwfHx8fDE3NjI4NzU1NDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "before after"
+    },
+    {
+      "id": "caso-1",
+      "description": "Imagem de caso clínico 1.",
+      "imageUrl": "https://images.unsplash.com/photo-1756364405980-e705da6a3da6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkZW50YWwlMjBjYXNlfGVufDB8fHx8MTc2Mjk1MTIxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dental case"
+    },
+    {
+      "id": "caso-2",
+      "description": "Imagem de caso clínico 2.",
+      "imageUrl": "https://images.unsplash.com/photo-1572062417488-eacf5dda8250?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzbWlsZSUyMG1ha2VvdmVyfGVufDB8fHx8MTc2Mjk1MTIxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smile makeover"
+    },
+    {
+      "id": "caso-3",
+      "description": "Imagem de caso clínico 3.",
+      "imageUrl": "https://images.unsplash.com/photo-1699620373942-40932731f77f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx2ZW5lZXJzJTIwdGVldGh8ZW58MHx8fHwxNzYyOTUxMjExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "veneers teeth"
+    },
+    {
+      "id": "caso-4",
+      "description": "Imagem de caso clínico 4.",
+      "imageUrl": "https://images.unsplash.com/photo-1675516161546-1894798c71de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZW50YWwlMjBjcm93bnN8ZW58MHx8fHwxNzYyOTUxMjExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dental crowns"
+    },
+    {
+      "id": "dra-tayn-retrato",
+      "description": "Retrato da Dra. Tayná Magalhães.",
+      "imageUrl": "https://images.unsplash.com/photo-1632054226752-b1b40867f7a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZG9jdG9yJTIwcHJvZmVzc2lvbmFsfGVufDB8fHx8MTc2Mjg0NDQ3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "doctor professional"
+    }
+  ]
 }
