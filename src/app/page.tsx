@@ -125,6 +125,7 @@ export default function Home() {
         <section className="relative w-full h-[500px] md:h-[600px] flex items-center">
           {heroBanner && (
             <Image
+              key={Date.now()}
               src={heroBanner.imageUrl}
               alt={heroBanner.description}
               fill
