@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Instagram, Facebook, Star, Clock, MapPin, Phone, HeartPulse, Wind, Anchor } from 'lucide-react';
+import { Instagram, Facebook, Star, Clock, MapPin, Phone } from 'lucide-react';
 import Link from 'next/link';
 import {
   Card,
@@ -23,19 +23,19 @@ const specialties = [
     title: 'Periodontia',
     description:
       'Cuidamos da saúde das suas gengivas e das estruturas que sustentam seus dentes, prevenindo e tratando doenças como gengivite e periodontite.',
-    icon: HeartPulse,
+    image: PlaceHolderImages.find(img => img.id === 'periodontia'),
   },
   {
     title: 'Cirurgia Oral e Periodontal',
     description:
       'Procedimentos cirúrgicos com precisão e segurança, incluindo enxertos, cirurgias gengivais estéticas e extrações complexas.',
-    icon: Wind,
+    image: PlaceHolderImages.find(img => img.id === 'cirurgia'),
   },
   {
     title: 'Implantes',
     description:
       'A solução definitiva para a perda de dentes. Devolvemos a função e a estética do seu sorriso com implantes dentários de titânio.',
-    icon: Anchor,
+    image: PlaceHolderImages.find(img => img.id === 'implante'),
   },
 ];
 
@@ -114,7 +114,6 @@ export default function Home() {
               priority
             />
           )}
-          <div className="absolute inset-0 bg-black/30"></div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-xl text-white">
               <p className="text-xl mb-2 font-serif" style={{ color: 'hsl(var(--primary))' }}>
@@ -157,16 +156,26 @@ export default function Home() {
               {specialties.map((spec, index) => (
                 <Card
                   key={spec.title}
-                  className="bg-card p-6 rounded-2xl shadow-lg text-center border-t-4 border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 fade-in-up"
+                  className="bg-card rounded-2xl shadow-lg text-center border-t-4 border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 fade-in-up overflow-hidden"
                    style={{ animationDelay: `${index * 150}ms` }}
                 >
-                    <div className="mb-4 inline-block p-4 bg-primary/10 rounded-full">
-                        <spec.icon className="h-8 w-8 text-primary" />
+                    {spec.image && (
+                      <div className="w-full h-48 relative">
+                        <Image
+                          src={spec.image.imageUrl}
+                          alt={spec.title}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={spec.image.imageHint}
+                        />
+                      </div>
+                    )}
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold font-serif text-secondary mb-3">
+                          {spec.title}
+                      </h3>
+                      <p className="text-muted-foreground">{spec.description}</p>
                     </div>
-                    <h3 className="text-xl font-bold font-serif text-secondary mb-3">
-                        {spec.title}
-                    </h3>
-                    <p className="text-muted-foreground">{spec.description}</p>
                 </Card>
               ))}
             </div>
