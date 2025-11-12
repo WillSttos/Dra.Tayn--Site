@@ -4,11 +4,11 @@ import { Button } from '@/components/ui/button';
 import type { ElementType } from '@/lib/types';
 import {
   CaseSensitive,
+  FileText,
   Heading1,
   Image as ImageIcon,
-  MousePointerSquare,
+  MousePointerClick,
   Pilcrow,
-  Textarea as TextareaIcon,
 } from 'lucide-react';
 import type React from 'react';
 
@@ -19,9 +19,9 @@ const paletteItems: {
 }[] = [
   { type: 'Heading', icon: <Heading1 />, label: 'Heading' },
   { type: 'Paragraph', icon: <Pilcrow />, label: 'Paragraph' },
-  { type: 'Button', icon: <MousePointerSquare />, label: 'Button' },
+  { type: 'Button', icon: <MousePointerClick />, label: 'Button' },
   { type: 'Input', icon: <CaseSensitive />, label: 'Input' },
-  { type: 'Textarea', icon: <TextareaIcon />, label: 'Textarea' },
+  { type: 'Textarea', icon: <FileText />, label: 'Textarea' },
   { type: 'Image', icon: <ImageIcon />, label: 'Image' },
 ];
 
