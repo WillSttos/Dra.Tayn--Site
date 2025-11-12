@@ -344,13 +344,13 @@ export default function Home() {
 
       </main>
 
-      <footer className="bg-foreground text-white py-16">
+      <footer className="bg-gradient-to-r from-[#E0A45E] to-[#AE5E55] text-white py-16">
         <div className="container mx-auto px-6 grid md:grid-cols-3 gap-10 text-center md:text-left">
             <div>
                  <Link href="/" className="text-3xl font-bold text-white font-serif mb-4 inline-block">
                     Dra. Tayná Magalhães
                 </Link>
-                <p className="text-gray-400">
+                <p className="text-gray-200">
                     Recupere sua autoestima com o sorriso dos seus sonhos.
                 </p>
             </div>
@@ -359,7 +359,7 @@ export default function Home() {
                 <ul className="space-y-2">
                     {navLinks.map(link => (
                         <li key={link.href}>
-                            <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">{link.label}</Link>
+                            <Link href={link.href} className="text-gray-200 hover:text-white transition-colors">{link.label}</Link>
                         </li>
                     ))}
                 </ul>
@@ -369,23 +369,23 @@ export default function Home() {
                  <div className="flex justify-center md:justify-start gap-6 mb-6">
                     <a
                     href="#"
-                    className="text-gray-400 hover:text-white transition duration-300"
+                    className="text-gray-200 hover:text-white transition duration-300"
                     aria-label="Instagram"
                     >
                     <Instagram />
                     </a>
                     <a
                     href="#"
-                    className="text-gray-400 hover:text-white transition duration-300"
+                    className="text-gray-200 hover:text-white transition duration-300"
                     aria-label="Facebook"
                     >
                     <Facebook />
                     </a>
                 </div>
-                <p className="text-gray-400 text-sm">CRO-BA 25109</p>
+                <p className="text-gray-200 text-sm">CRO-BA 25109</p>
             </div>
         </div>
-        <div className="container mx-auto px-6 mt-10 border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
+        <div className="container mx-auto px-6 mt-10 border-t border-gray-400 pt-8 text-center text-gray-200 text-sm">
              <p>
                 &copy; {new Date().getFullYear()} Dra. Tayná Magalhães. Todos os
                 direitos reservados.
