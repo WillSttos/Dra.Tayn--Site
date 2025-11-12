@@ -13,6 +13,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { ImageCompareSlider } from '@/components/ui/image-compare-slider';
+import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 const ToothIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
@@ -138,79 +139,89 @@ export default function Home() {
             )}
             <div className="container mx-auto px-6 absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <div className="max-w-xl">
-                <h1 className="text-gradient text-4xl md:text-6xl font-bold font-serif leading-tight mb-6 fade-in-up">
-                  Recupere sua <em>autoestima</em> com o Sorriso dos Sonhos!
-                </h1>
-                <p
-                  className="text-lg mb-8 fade-in-up"
-                  style={{ color: '#553d30', animationDelay: '200ms' }}
-                >
-                  Oferecemos <strong>tratamentos periodontais</strong> e de <strong>implantes</strong> com a mais <strong>alta tecnologia</strong>, focados na sua <strong>saúde e bem-estar</strong>.
-                </p>
-                <div className="fade-in-up" style={{ animationDelay: '400ms' }}>
+                <AnimateOnScroll>
+                    <h1 className="text-gradient text-4xl md:text-6xl font-bold font-serif leading-tight mb-6">
+                      Recupere sua <em>autoestima</em> com o Sorriso dos Sonhos!
+                    </h1>
+                </AnimateOnScroll>
+                <AnimateOnScroll delay={0.2}>
+                    <p
+                      className="text-lg mb-8"
+                      style={{ color: '#553d30' }}
+                    >
+                      Oferecemos <strong>tratamentos periodontais</strong> e de <strong>implantes</strong> com a mais <strong>alta tecnologia</strong>, focados na sua <strong>saúde e bem-estar</strong>.
+                    </p>
+                </AnimateOnScroll>
+                <AnimateOnScroll delay={0.4}>
                   <Button
                     onClick={openWhatsapp}
                     className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-xl pulse-button bg-primary hover:bg-secondary"
                   >
                     Agendar autoavaliação
                   </Button>
-                </div>
+                </AnimateOnScroll>
               </div>
             </div>
         </section>
 
         {/* Especialidades */}
-        <section id="especialidades" className="py-20 md:py-28 bg-background fade-in-up">
+        <section id="especialidades" className="py-20 md:py-28 bg-background">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4 fade-in-up">
-              Estética Odontológica Personalizada
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-16 fade-in-up" style={{ animationDelay: '150ms' }}>
-             Nossas especialidades são focadas em devolver a função e a estética do seu sorriso.
-            </p>
+            <AnimateOnScroll>
+                <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4">
+                Estética Odontológica Personalizada
+                </h2>
+            </AnimateOnScroll>
+            <AnimateOnScroll delay={0.2}>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-16">
+                Nossas especialidades são focadas em devolver a função e a estética do seu sorriso.
+                </p>
+            </AnimateOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {specialties.map((spec, index) => (
-                <Card
-                  key={spec.title}
-                  className="bg-card rounded-2xl shadow-lg text-center border-t-4 border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 fade-in-up"
-                   style={{ animationDelay: `${index * 150 + 300}ms` }}
-                >
-                    <div className="p-8 flex flex-col items-center">
-                      <div className="p-4 bg-primary/10 rounded-full mb-4">
-                        <spec.icon className="w-10 h-10 text-primary" />
-                      </div>
-                      <h3 className="text-xl font-bold font-serif text-secondary mb-3">
-                          {spec.title}
-                      </h3>
-                      <p className="text-muted-foreground">{spec.description}</p>
-                    </div>
-                </Card>
+                <AnimateOnScroll key={spec.title} delay={index * 0.2}>
+                    <Card
+                    className="bg-card rounded-2xl shadow-lg text-center border-t-4 border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                    >
+                        <div className="p-8 flex flex-col items-center">
+                        <div className="p-4 bg-primary/10 rounded-full mb-4">
+                            <spec.icon className="w-10 h-10 text-primary" />
+                        </div>
+                        <h3 className="text-xl font-bold font-serif text-secondary mb-3">
+                            {spec.title}
+                        </h3>
+                        <p className="text-muted-foreground">{spec.description}</p>
+                        </div>
+                    </Card>
+                </AnimateOnScroll>
               ))}
             </div>
-            <div className="fade-in-up" style={{ animationDelay: '600ms' }}>
+             <AnimateOnScroll delay={0.3}>
               <Button
                 onClick={openWhatsapp}
                 className="mt-16 inline-block text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
               >
                 Quero agendar minha avaliação
               </Button>
-            </div>
+            </AnimateOnScroll>
           </div>
         </section>
         
         {/* Antes e Depois */}
-        <section className="bg-card py-20 md:py-28 fade-in-up">
+        <section className="bg-card py-20 md:py-28">
             <div className="container mx-auto px-6 flex flex-col items-center gap-12">
                 <div className="w-full text-center">
-                    <p className="font-serif text-primary text-lg fade-in-up">Resultados Reais</p>
-                    <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-8 fade-in-up" style={{ animationDelay: '150ms' }}>
-                        Resultados que transformam sorrisos
-                    </h2>
+                    <AnimateOnScroll>
+                        <p className="font-serif text-primary text-lg">Resultados Reais</p>
+                        <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-8">
+                            Resultados que transformam sorrisos
+                        </h2>
+                    </AnimateOnScroll>
                 </div>
                 <div className="w-full lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {beforeAfterCases.map((caseItem, index) => (
                         caseItem.before && caseItem.after && (
-                          <div key={caseItem.id} className="fade-in-up" style={{ animationDelay: `${index * 150 + 300}ms` }}>
+                          <AnimateOnScroll key={caseItem.id} delay={index * 0.15}>
                             <ImageCompareSlider
                                 before={caseItem.before.imageUrl}
                                 after={caseItem.after.imageUrl}
@@ -218,31 +229,33 @@ export default function Home() {
                                 beforeHint={caseItem.before.imageHint}
                                 afterHint={caseItem.after.imageHint}
                             />
-                          </div>
+                          </AnimateOnScroll>
                         )
                     ))}
                 </div>
-                <div className="w-full text-center fade-in-up" style={{ animationDelay: '600ms' }}>
-                    <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                    Veja um exemplo do nosso trabalho dedicado. Cada paciente recebe
-                    um plano de tratamento personalizado para alcançar o melhor
-                    resultado possível, unindo saúde e estética.
-                    </p>
-                    <Button
-                        onClick={openWhatsapp}
-                        className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
-                    >
-                        Eu também quero transformar meu sorriso
-                    </Button>
+                <div className="w-full text-center">
+                     <AnimateOnScroll>
+                        <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+                        Veja um exemplo do nosso trabalho dedicado. Cada paciente recebe
+                        um plano de tratamento personalizado para alcançar o melhor
+                        resultado possível, unindo saúde e estética.
+                        </p>
+                        <Button
+                            onClick={openWhatsapp}
+                            className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
+                        >
+                            Eu também quero transformar meu sorriso
+                        </Button>
+                    </AnimateOnScroll>
                 </div>
             </div>
         </section>
 
 
         {/* Sobre a Doutora */}
-        <section id="sobre" className="py-20 md:py-28 bg-background fade-in-up">
+        <section id="sobre" className="py-20 md:py-28 bg-background">
           <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/3 relative fade-in-up" style={{ animationDelay: '150ms' }}>
+            <AnimateOnScroll className="md:w-1/3 relative">
                  <div className="absolute -top-4 -left-4 w-full h-full border-4 border-primary rounded-2xl transform -rotate-3"></div>
                 <Image
                     src={PlaceHolderImages[9].imageUrl}
@@ -252,115 +265,129 @@ export default function Home() {
                     className="rounded-2xl shadow-2xl w-full h-auto object-cover relative z-10"
                     data-ai-hint={PlaceHolderImages[9].imageHint}
                 />
-            </div>
-            <div className="md:w-2/3 fade-in-up" style={{ animationDelay: '300ms' }}>
-              <p className="font-serif text-primary text-lg">Conheça a especialista</p>
-              <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4">
-                Dra. Tayná Magalhães
-              </h2>
-              <p className="text-lg font-semibold text-secondary mb-2">
-                Esp. em Periodontia | Cirurgia Oral e Periodontal | Implantes
-              </p>
-              <p className="text-md font-semibold text-gray-700 mb-6">
-                CRO-BA 25109
-              </p>
-              <p className="text-muted-foreground mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p className="text-muted-foreground">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                anim id est laborum.
-              </p>
-              <p className="font-serif text-4xl text-primary/70 mt-6">
-                Tayná Magalhães
-              </p>
+            </AnimateOnScroll>
+            <div className="md:w-2/3">
+              <AnimateOnScroll>
+                <p className="font-serif text-primary text-lg">Conheça a especialista</p>
+                <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4">
+                    Dra. Tayná Magalhães
+                </h2>
+                <p className="text-lg font-semibold text-secondary mb-2">
+                    Esp. em Periodontia | Cirurgia Oral e Periodontal | Implantes
+                </p>
+                <p className="text-md font-semibold text-gray-700 mb-6">
+                    CRO-BA 25109
+                </p>
+              </AnimateOnScroll>
+              <AnimateOnScroll delay={0.2}>
+                <p className="text-muted-foreground mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p className="text-muted-foreground">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.
+                </p>
+                <p className="font-serif text-4xl text-primary/70 mt-6">
+                    Tayná Magalhães
+                </p>
+              </AnimateOnScroll>
             </div>
           </div>
         </section>
 
         {/* Depoimentos */}
-        <section id="depoimentos" className="bg-card py-20 md:py-28 fade-in-up">
+        <section id="depoimentos" className="bg-card py-20 md:py-28">
           <div className="container mx-auto px-6 text-center">
-            <p className="font-serif text-primary text-lg fade-in-up">Depoimentos</p>
-            <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-16 fade-in-up" style={{ animationDelay: '150ms' }}>
-              O que nossos pacientes dizem!
-            </h2>
+            <AnimateOnScroll>
+                <p className="font-serif text-primary text-lg">Depoimentos</p>
+                <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-16">
+                O que nossos pacientes dizem!
+                </h2>
+            </AnimateOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <Card
-                  key={index}
-                  className="bg-background p-8 rounded-2xl shadow-lg text-left fade-in-up"
-                  style={{ animationDelay: `${index * 150 + 300}ms` }}
-                >
-                  <CardHeader className="p-0 mb-4">
-                    <div className="flex items-center">
-                        {[...Array(5)].map((_, i) => <Star key={i} className="text-yellow-400 fill-yellow-400" size={20}/>)}
-                    </div>
-                  </CardHeader>
-                  <CardContent className="p-0">
-                    <p className="text-muted-foreground mb-4 italic">{testimonial.quote}</p>
-                    <p className="font-bold text-secondary">
-                      - {testimonial.author}
-                    </p>
-                  </CardContent>
-                </Card>
+                <AnimateOnScroll key={index} delay={index * 0.2}>
+                    <Card
+                    className="bg-background p-8 rounded-2xl shadow-lg text-left"
+                    >
+                    <CardHeader className="p-0 mb-4">
+                        <div className="flex items-center">
+                            {[...Array(5)].map((_, i) => <Star key={i} className="text-yellow-400 fill-yellow-400" size={20}/>)}
+                        </div>
+                    </CardHeader>
+                    <CardContent className="p-0">
+                        <p className="text-muted-foreground mb-4 italic">{testimonial.quote}</p>
+                        <p className="font-bold text-secondary">
+                        - {testimonial.author}
+                        </p>
+                    </CardContent>
+                    </Card>
+                </AnimateOnScroll>
               ))}
             </div>
           </div>
         </section>
         
         {/* Localização */}
-        <section id="localizacao" className="py-20 md:py-28 text-center bg-background fade-in-up">
+        <section id="localizacao" className="py-20 md:py-28 text-center bg-background">
             <div className="container mx-auto px-6">
-                <p className="font-serif text-primary text-lg fade-in-up">Onde estamos</p>
-                <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-12 fade-in-up" style={{ animationDelay: '150ms' }}>
-                    Venha Conhecer Nossa Clínica!
-                </h2>
-                <div className="w-full h-96 rounded-2xl shadow-xl overflow-hidden mb-8 fade-in-up" style={{ animationDelay: '300ms' }}>
-                    <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.971339180709!2d-38.4593430851779!3d-12.97371199085449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b204e8b0001%3A0x8f2d5c3695d52044!2sSalvador%2C%20BA!5e0!3m2!1spt-BR!2sbr!4v1678888888888!5m2!1spt-BR!2sbr"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={true}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                </div>
+                <AnimateOnScroll>
+                    <p className="font-serif text-primary text-lg">Onde estamos</p>
+                    <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-12">
+                        Venha Conhecer Nossa Clínica!
+                    </h2>
+                </AnimateOnScroll>
+                <AnimateOnScroll>
+                    <div className="w-full h-96 rounded-2xl shadow-xl overflow-hidden mb-8">
+                        <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.971339180709!2d-38.4593430851779!3d-12.97371199085449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b204e8b0001%3A0x8f2d5c3695d52044!2sSalvador%2C%20BA!5e0!3m2!1spt-BR!2sbr!4v1678888888888!5m2!1spt-BR!2sbr"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen={true}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </AnimateOnScroll>
                 <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
-                    <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4 fade-in-up" style={{ animationDelay: '450ms' }}>
-                        <MapPin className="text-primary mt-1" size={24}/>
-                        <div>
-                            <h3 className="font-bold text-lg text-foreground">Endereço</h3>
-                            <p className="text-muted-foreground">
-                                Av. Tancredo Neves, 2539 - Caminho das Árvores, Salvador - BA,
-                                41820-021
-                            </p>
-                             <a
-                                href="https://maps.app.goo.gl/u5X1eZ9Y8wZ6aXbX7"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block text-primary font-semibold mt-2 hover:underline"
-                            >
-                                Ver no Google Maps
-                            </a>
+                    <AnimateOnScroll>
+                        <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4">
+                            <MapPin className="text-primary mt-1" size={24}/>
+                            <div>
+                                <h3 className="font-bold text-lg text-foreground">Endereço</h3>
+                                <p className="text-muted-foreground">
+                                    Av. Tancredo Neves, 2539 - Caminho das Árvores, Salvador - BA,
+                                    41820-021
+                                </p>
+                                <a
+                                    href="https://maps.app.goo.gl/u5X1eZ9Y8wZ6aXbX7"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-block text-primary font-semibold mt-2 hover:underline"
+                                >
+                                    Ver no Google Maps
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                     <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4 fade-in-up" style={{ animationDelay: '600ms' }}>
-                        <Clock className="text-primary mt-1" size={24}/>
-                        <div>
-                            <h3 className="font-bold text-lg text-foreground">Horário de Funcionamento</h3>
-                            <p className="text-muted-foreground">
-                                Segunda a Sexta: 08:00 - 18:00<br/>
-                                Sábado: 08:00 - 12:00
-                            </p>
+                    </AnimateOnScroll>
+                     <AnimateOnScroll delay={0.2}>
+                        <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4">
+                            <Clock className="text-primary mt-1" size={24}/>
+                            <div>
+                                <h3 className="font-bold text-lg text-foreground">Horário de Funcionamento</h3>
+                                <p className="text-muted-foreground">
+                                    Segunda a Sexta: 08:00 - 18:00<br/>
+                                    Sábado: 08:00 - 12:00
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </AnimateOnScroll>
                 </div>
             </div>
         </section>
@@ -369,15 +396,15 @@ export default function Home() {
 
       <footer className="bg-gradient-to-r from-[#E0A45E] to-[#AE5E55] text-white py-16">
         <div className="container mx-auto px-6 grid md:grid-cols-3 gap-10 text-center md:text-left">
-            <div className="fade-in-up">
+            <AnimateOnScroll>
                  <Link href="/" className="text-3xl font-bold text-white font-serif mb-4 inline-block">
                     Dra. Tayná Magalhães
                 </Link>
                 <p className="text-gray-200">
                     Recupere sua autoestima com o sorriso dos seus sonhos.
                 </p>
-            </div>
-            <div className="fade-in-up" style={{ animationDelay: '150ms' }}>
+            </AnimateOnScroll>
+            <AnimateOnScroll delay={0.15}>
                 <h4 className="font-bold text-lg mb-4 text-white">Navegação</h4>
                 <ul className="space-y-2">
                     {navLinks.map(link => (
@@ -386,8 +413,8 @@ export default function Home() {
                         </li>
                     ))}
                 </ul>
-            </div>
-            <div className="fade-in-up" style={{ animationDelay: '300ms' }}>
+            </AnimateOnScroll>
+            <AnimateOnScroll delay={0.3}>
                 <h4 className="font-bold text-lg mb-4 text-white">Redes Sociais</h4>
                  <div className="flex justify-center md:justify-start gap-6 mb-6">
                     <a
@@ -406,14 +433,16 @@ export default function Home() {
                     </a>
                 </div>
                 <p className="text-gray-200 text-sm">CRO-BA 25109</p>
+            </AnimateOnScroll>
+        </div>
+        <AnimateOnScroll>
+            <div className="container mx-auto px-6 mt-10 border-t border-gray-400 pt-8 text-center text-gray-200 text-sm">
+                <p>
+                    &copy; {new Date().getFullYear()} Dra. Tayná Magalhães. Todos os
+                    direitos reservados.
+                </p>
             </div>
-        </div>
-        <div className="container mx-auto px-6 mt-10 border-t border-gray-400 pt-8 text-center text-gray-200 text-sm fade-in-up" style={{ animationDelay: '450ms' }}>
-             <p>
-                &copy; {new Date().getFullYear()} Dra. Tayná Magalhães. Todos os
-                direitos reservados.
-            </p>
-        </div>
+        </AnimateOnScroll>
       </footer>
     </div>
   );
