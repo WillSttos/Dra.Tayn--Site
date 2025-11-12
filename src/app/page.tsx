@@ -17,20 +17,25 @@ import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 const ToothIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+        {...props}
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
     >
-      <path d="M9.953 3.141a2.23 2.23 0 0 1 4.094 0l.138.414a1.5 1.5 0 0 0 1.415 1.166h.455a2.5 2.5 0 0 1 2.5 2.5v.455a1.5 1.5 0 0 0 1.166 1.415l.414.138a2.23 2.23 0 0 1 0 4.094l-.414.138a1.5 1.5 0 0 0-1.166 1.415v.455a2.5 2.5 0 0 1-2.5 2.5h-.455a1.5 1.5 0 0 0-1.415 1.166l-.138.414a2.23 2.23 0 0 1-4.094 0l-.138-.414a1.5 1.5 0 0 0-1.415-1.166H7a2.5 2.5 0 0 1-2.5-2.5v-.455a1.5 1.5 0 0 0-1.166-1.415l-.414-.138a2.23 2.23 0 0 1 0-4.094l.414.138a1.5 1.5 0 0 0 1.166-1.415V7.5a2.5 2.5 0 0 1 2.5-2.5h.455a1.5 1.5 0 0 0 1.415-1.166z" />
-      <path d="M14.5 13.5h-5" />
-      <path d="M12 11v5" />
+        <path d="M20.92 7.63A2.5 2.5 0 0 0 18.5 6h-13A2.5 2.5 0 0 0 3.08 7.63L3 8a2.5 2.5 0 0 0 4 2h10a2.5 2.5 0 0 0 4-2l-.08-.37Z" />
+        <path d="M3 10v4" />
+        <path d="M21 10v4" />
+        <path d="M7 10v2h10v-2" />
+        <path d="m17 14-2.5 2.5-2.5-2.5" />
+        <path d="m17 18.5-2.5 2.5-2.5-2.5" />
+        <path d="m7 14 2.5 2.5 2.5-2.5" />
+        <path d="m7 18.5 2.5 2.5 2.5-2.5" />
     </svg>
 );
 
