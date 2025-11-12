@@ -122,28 +122,16 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative w-full h-[500px] md:h-[600px] flex items-center">
-          {heroBanner && (
-            <Image
-              key={Date.now()}
-              src={heroBanner.imageUrl}
-              alt={heroBanner.description}
-              fill
-              className="object-cover object-center"
-              data-ai-hint={heroBanner.imageHint}
-              priority
-            />
-          )}
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-xl text-white">
+        <section className="bg-card w-full pt-48 pb-24 flex items-center">
+          <div className="container mx-auto px-6">
+            <div className="max-w-xl">
               <h1
                 className="text-4xl md:text-6xl font-bold font-serif leading-tight mb-6 text-gradient"
               >
                 Recupere sua <em>autoestima</em> com o Sorriso dos Sonhos!
               </h1>
               <p
-                className="text-lg mb-8"
-                style={{ color: '#553d30' }}
+                className="text-lg mb-8 text-foreground/80"
               >
                 Oferecemos <strong>tratamentos periodontais</strong> e de <strong>implantes</strong> com a mais <strong>alta tecnologia</strong>, focados na sua <strong>saúde e bem-estar</strong>.
               </p>
@@ -420,6 +408,9 @@ export default function Home() {
     
 
 
+
+
+    
 
 
     
