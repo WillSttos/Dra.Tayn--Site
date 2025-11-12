@@ -128,21 +128,22 @@ export default function Home() {
               src={heroBanner.imageUrl}
               alt={heroBanner.description}
               fill
-              className="object-cover"
+              className="object-cover object-center"
               data-ai-hint={heroBanner.imageHint}
               priority
             />
           )}
-           <div className="absolute inset-0 bg-black/30"></div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-xl text-white">
               <h1
-                className="text-4xl md:text-6xl font-bold font-serif leading-tight mb-6"
+                className="text-4xl md:text-6xl font-bold font-serif leading-tight mb-6 text-gradient"
+                style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.3)' }}
               >
-                Recupere sua autoestima com o Sorriso dos Sonhos!
+                Recupere sua <em className="not-italic">autoestima</em> com o Sorriso dos Sonhos!
               </h1>
               <p
                 className="text-lg mb-8"
+                style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.5)' }}
               >
                 Oferecemos tratamentos periodontais e de implantes com a mais alta tecnologia, focados na sua saúde e bem-estar.
               </p>

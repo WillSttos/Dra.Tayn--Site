@@ -59,6 +59,10 @@
 }
 
 @layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #e0a45e, #ae5e55);
+  }
   .pulse-button {
     animation: pulse-animation 2s infinite;
   }
