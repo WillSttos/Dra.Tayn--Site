@@ -27,7 +27,7 @@ const ToothIcon = (props: React.SVGProps<SVGSVGElement>) => (
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M9.953 3.141a2.23 2.23 0 0 1 4.094 0l.138.414a1.5 1.5 0 0 0 1.415 1.166h.455a2.5 2.5 0 0 1 2.5 2.5v.455a1.5 1.5 0 0 0 1.166 1.415l.414.138a2.23 2.23 0 0 1 0 4.094l-.414.138a1.5 1.5 0 0 0-1.166 1.415v.455a2.5 2.5 0 0 1-2.5 2.5h-.455a1.5 1.5 0 0 0-1.415 1.166l-.138.414a2.23 2.23 0 0 1-4.094 0l-.138-.414a1.5 1.5 0 0 0-1.415-1.166H7a2.5 2.5 0 0 1-2.5-2.5v-.455a1.5 1.5 0 0 0-1.166-1.415l-.414-.138a2.23 2.23 0 0 1 0-4.094l.414-.138a1.5 1.5 0 0 0 1.166-1.415V7.5a2.5 2.5 0 0 1 2.5-2.5h.455a1.5 1.5 0 0 0 1.415-1.166z" />
+      <path d="M9.953 3.141a2.23 2.23 0 0 1 4.094 0l.138.414a1.5 1.5 0 0 0 1.415 1.166h.455a2.5 2.5 0 0 1 2.5 2.5v.455a1.5 1.5 0 0 0 1.166 1.415l.414.138a2.23 2.23 0 0 1 0 4.094l-.414.138a1.5 1.5 0 0 0-1.166 1.415v.455a2.5 2.5 0 0 1-2.5 2.5h-.455a1.5 1.5 0 0 0-1.415 1.166l-.138.414a2.23 2.23 0 0 1-4.094 0l-.138-.414a1.5 1.5 0 0 0-1.415-1.166H7a2.5 2.5 0 0 1-2.5-2.5v-.455a1.5 1.5 0 0 0-1.166-1.415l-.414-.138a2.23 2.23 0 0 1 0-4.094l.414.138a1.5 1.5 0 0 0 1.166-1.415V7.5a2.5 2.5 0 0 1 2.5-2.5h.455a1.5 1.5 0 0 0 1.415-1.166z" />
       <path d="M14.5 13.5h-5" />
       <path d="M12 11v5" />
     </svg>
@@ -141,7 +141,8 @@ export default function Home() {
                 Recupere sua <em>autoestima</em> com o Sorriso dos Sonhos!
               </h1>
               <p
-                className="text-lg text-secondary-foreground mb-8"
+                className="text-lg mb-8"
+                style={{ color: '#553d30' }}
               >
                 Oferecemos <strong>tratamentos periodontais</strong> e de <strong>implantes</strong> com a mais <strong>alta tecnologia</strong>, focados na sua <strong>saúde e bem-estar</strong>.
               </p>
