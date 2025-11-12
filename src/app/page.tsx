@@ -138,13 +138,13 @@ export default function Home() {
               <h1
                 className="text-4xl md:text-6xl font-bold font-serif leading-tight mb-6 text-gradient"
               >
-                Recupere sua <em className='not-italic'>autoestima</em> com o Sorriso dos Sonhos!
+                Recupere sua <em>autoestima</em> com o Sorriso dos Sonhos!
               </h1>
               <p
                 className="text-lg mb-8"
                 style={{ color: '#ae5e55', textShadow: '1px 1px 2px rgba(255,255,255,0.7)' }}
               >
-                Oferecemos tratamentos periodontais e de implantes com a mais alta tecnologia, focados na sua saúde e bem-estar.
+                Oferecemos <strong>tratamentos periodontais</strong> e de <strong>implantes</strong> com a mais <strong>alta tecnologia</strong>, focados na sua <strong>saúde e bem-estar</strong>.
               </p>
               <Button
                 onClick={openWhatsapp}
@@ -411,5 +411,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
