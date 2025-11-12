@@ -136,7 +136,6 @@ export default function Home() {
                 />
               </div>
             )}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
             <div className="container mx-auto px-6 absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <div className="max-w-xl">
                 <h1
@@ -428,6 +427,8 @@ export default function Home() {
 
     
 
+
+    
 
     
 
