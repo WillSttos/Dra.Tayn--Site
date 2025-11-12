@@ -138,15 +138,12 @@ export default function Home() {
             )}
             <div className="container mx-auto px-6 absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <div className="max-w-xl">
-                <h1
-                  className="text-4xl md:text-6xl font-bold font-serif leading-tight mb-6 text-white"
-                  style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
-                >
+                <h1 className="text-gradient text-4xl md:text-6xl font-bold font-serif leading-tight mb-6">
                   Recupere sua <em>autoestima</em> com o Sorriso dos Sonhos!
                 </h1>
                 <p
-                  className="text-lg mb-8 text-gray-200"
-                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7)' }}
+                  className="text-lg mb-8"
+                  style={{ color: '#553d30' }}
                 >
                   Oferecemos <strong>tratamentos periodontais</strong> e de <strong>implantes</strong> com a mais <strong>alta tecnologia</strong>, focados na sua <strong>saúde e bem-estar</strong>.
                 </p>
