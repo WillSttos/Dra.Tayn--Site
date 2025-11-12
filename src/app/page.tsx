@@ -308,7 +308,7 @@ export default function Home() {
               <Facebook />
             </a>
           </div>
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-200 text-sm">
             &copy; {new Date().getFullYear()} Dra. Tayná Magalhães. Todos os
             direitos reservados.
           </p>
