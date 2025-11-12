@@ -122,27 +122,40 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="bg-card w-full pt-48 pb-24 flex items-center">
-          <div className="container mx-auto px-6">
-            <div className="max-w-xl">
-              <h1
-                className="text-4xl md:text-6xl font-bold font-serif leading-tight mb-6 text-gradient"
-              >
-                Recupere sua <em>autoestima</em> com o Sorriso dos Sonhos!
-              </h1>
-              <p
-                className="text-lg mb-8 text-foreground/80"
-              >
-                Oferecemos <strong>tratamentos periodontais</strong> e de <strong>implantes</strong> com a mais <strong>alta tecnologia</strong>, focados na sua <strong>saúde e bem-estar</strong>.
-              </p>
-              <Button
-                onClick={openWhatsapp}
-                className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-xl pulse-button bg-primary hover:bg-secondary"
-              >
-                Agendar autoavaliação
-              </Button>
+        <section className="relative w-full h-[700px] flex items-center">
+            {heroBanner && (
+              <Image
+                src={heroBanner.imageUrl}
+                alt={heroBanner.description}
+                fill
+                className="object-cover"
+                data-ai-hint={heroBanner.imageHint}
+                priority
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
+            <div className="container mx-auto px-6 relative z-10">
+              <div className="max-w-xl">
+                <h1
+                  className="text-4xl md:text-6xl font-bold font-serif leading-tight mb-6 text-white"
+                  style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
+                >
+                  Recupere sua <em>autoestima</em> com o Sorriso dos Sonhos!
+                </h1>
+                <p
+                  className="text-lg mb-8 text-gray-200"
+                  style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.7)' }}
+                >
+                  Oferecemos <strong>tratamentos periodontais</strong> e de <strong>implantes</strong> com a mais <strong>alta tecnologia</strong>, focados na sua <strong>saúde e bem-estar</strong>.
+                </p>
+                <Button
+                  onClick={openWhatsapp}
+                  className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-xl pulse-button bg-primary hover:bg-secondary"
+                >
+                  Agendar autoavaliação
+                </Button>
+              </div>
             </div>
-          </div>
         </section>
 
         {/* Especialidades */}
@@ -412,5 +425,7 @@ export default function Home() {
 
     
 
+
+    
 
     
