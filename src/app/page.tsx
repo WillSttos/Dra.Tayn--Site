@@ -76,6 +76,8 @@ export default function Home() {
     window.open(whatsappUrl, '_blank');
   };
 
+  const heroBanner = PlaceHolderImages.find(p => p.id === 'hero-banner-desktop');
+
   return (
     <div className="bg-background font-sans text-foreground antialiased overflow-x-hidden">
       <header className="bg-background/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
@@ -101,43 +103,45 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-card pt-20 md:pt-32 pb-16 overflow-hidden">
-            <div className="absolute inset-0 opacity-5">
-                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="a" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="scale(2) rotate(45)"><rect x="0" y="0" width="100%" height="100%" fill="hsla(0,0%,100%,1)"/><path d="M1-5.64V45.64M-5.64 1h45.64" strokeLinecap="square" strokeWidth="1" stroke="hsla(26, 53%, 63%, 0.2)" fill="none"/></pattern></defs><rect width="800%" height="800%" transform="translate(0,0)" fill="url(#a)"/></svg>
+        <section className="relative w-full h-[500px] md:h-[600px] flex items-center">
+          {heroBanner && (
+            <Image
+              src={heroBanner.imageUrl}
+              alt={heroBanner.description}
+              fill
+              className="object-cover object-center"
+              data-ai-hint={heroBanner.imageHint}
+              priority
+            />
+          )}
+          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-xl text-white">
+              <p className="text-xl mb-2 font-serif" style={{ color: 'hsl(var(--primary))' }}>
+                Recupere sua autoestima
+              </p>
+              <h1
+                className="text-4xl md:text-6xl font-bold font-serif leading-tight mb-6"
+                style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}
+              >
+                Através do Sorriso!
+              </h1>
+              <p
+                className="text-lg mb-8"
+                style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}
+              >
+                Com resultados de excelência e um tratamento personalizado para
+                o seu sorriso, vamos juntos elevar sua autoestima e garantir que
+                você tenha motivos para sorrir com confiança!
+              </p>
+              <Button
+                onClick={openWhatsapp}
+                className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-xl pulse-button bg-primary hover:bg-secondary"
+              >
+                Fale com um especialista agora
+              </Button>
             </div>
-            <div className="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center relative">
-                <div className="text-center md:text-left">
-                    <p className="text-primary font-serif text-xl mb-2">Recupere sua autoestima</p>
-                    <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary font-serif leading-tight mb-6">
-                        Através do Sorriso!
-                    </h1>
-                    <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto md:mx-0">
-                        Com resultados de excelência e um tratamento personalizado para o seu sorriso, vamos juntos elevar sua autoestima e garantir que você tenha motivos para sorrir com confiança!
-                    </p>
-                    <Button
-                    onClick={openWhatsapp}
-                    className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-xl pulse-button bg-primary hover:bg-secondary"
-                    >
-                        Fale com um especialista agora
-                    </Button>
-                </div>
-                <div className="relative h-[400px] md:h-[600px]">
-                    <div className="absolute inset-0 -bottom-10 -right-10">
-                        <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl"></div>
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute w-full h-full opacity-30 text-primary">
-                            <path fill="currentColor" d="M48.5,-59.9C62.9,-51.9,74.9,-37.2,77.9,-20.9C80.8,-4.6,74.6,13.3,64.8,26.7C55,40.1,41.5,49,27.5,56.8C13.5,64.6,-1.1,71.3,-15.9,69.2C-30.8,67.1,-46,56.3,-56.9,43.2C-67.8,30,-74.4,14.5,-73.4,0C-72.3,-14.6,-63.5,-29.2,-52.1,-40.5C-40.7,-51.8,-26.7,-60,-12.3,-64.1C2.1,-68.2,16.8,-67.9,29.3,-67.1C41.7,-66.2,52,-65,48.5,-59.9Z" transform="translate(100 100)" />
-                        </svg>
-                    </div>
-                     <Image
-                        src={PlaceHolderImages[0].imageUrl}
-                        alt="Dra. Tayná Magalhães"
-                        fill
-                        className="rounded-lg shadow-2xl object-cover object-top"
-                        data-ai-hint={PlaceHolderImages[0].imageHint}
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                </div>
-            </div>
+          </div>
         </section>
 
         {/* Especialidades */}
