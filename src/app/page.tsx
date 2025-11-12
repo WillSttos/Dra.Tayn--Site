@@ -99,14 +99,14 @@ export default function Home() {
 
   return (
     <div className="bg-background font-sans text-foreground antialiased overflow-x-hidden">
-      <header className="bg-background/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
-        <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
+      <header className="bg-white/10 backdrop-blur-lg shadow-lg sticky top-0 z-50">
+        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-secondary font-serif">
             Dra. Tayná Magalhães
           </Link>
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map(link => (
-                 <Link key={link.href} href={link.href} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
+                 <Link key={link.href} href={link.href} className="text-sm font-medium text-foreground/90 hover:text-primary transition-colors">
                     {link.label}
                  </Link>
             ))}
