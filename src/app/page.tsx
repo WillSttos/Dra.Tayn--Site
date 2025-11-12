@@ -122,19 +122,22 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative w-full h-[700px] flex items-center">
+        <section className="relative w-full flex items-center">
             {heroBanner && (
-              <Image
-                src={heroBanner.imageUrl}
-                alt={heroBanner.description}
-                fill
-                className="object-cover"
-                data-ai-hint={heroBanner.imageHint}
-                priority
-              />
+              <div className="relative w-full h-auto">
+                <Image
+                  src={heroBanner.imageUrl}
+                  alt={heroBanner.description}
+                  width={1920}
+                  height={1080}
+                  className="object-cover w-full h-auto"
+                  data-ai-hint={heroBanner.imageHint}
+                  priority
+                />
+              </div>
             )}
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="container mx-auto px-6 absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <div className="max-w-xl">
                 <h1
                   className="text-4xl md:text-6xl font-bold font-serif leading-tight mb-6 text-white"
@@ -425,6 +428,8 @@ export default function Home() {
 
     
 
+
+    
 
     
 
