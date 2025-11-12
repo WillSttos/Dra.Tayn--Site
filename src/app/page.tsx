@@ -93,7 +93,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative bg-card pt-20 md:pt-32 pb-16 overflow-hidden">
             <div className="absolute inset-0 opacity-5">
-                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="a" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="scale(2) rotate(45)"><rect x="0" y="0" width="100%" height="100%" fill="hsla(0,0%,100%,1)"/><path d="M1-5.64V45.64M-5.64 1h45.64" stroke-linecap="square" stroke-width="1" stroke="hsla(26, 53%, 63%, 0.2)" fill="none"/></pattern></defs><rect width="800%" height="800%" transform="translate(0,0)" fill="url(#a)"/></svg>
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="a" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="scale(2) rotate(45)"><rect x="0" y="0" width="100%" height="100%" fill="hsla(0,0%,100%,1)"/><path d="M1-5.64V45.64M-5.64 1h45.64" strokeLinecap="square" strokeWidth="1" stroke="hsla(26, 53%, 63%, 0.2)" fill="none"/></pattern></defs><rect width="800%" height="800%" transform="translate(0,0)" fill="url(#a)"/></svg>
             </div>
             <div className="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center relative">
                 <div className="text-center md:text-left">
