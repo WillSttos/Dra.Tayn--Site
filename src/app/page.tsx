@@ -160,20 +160,20 @@ export default function Home() {
         </section>
 
         {/* Especialidades */}
-        <section id="especialidades" className="py-20 md:py-28 bg-background">
+        <section id="especialidades" className="py-20 md:py-28 bg-background fade-in-up">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4 fade-in-up">
+            <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4">
               Estética Odontológica Personalizada
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-16 fade-in-up" style={{ animationDelay: '150ms' }}>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-16">
              Nossas especialidades são focadas em devolver a função e a estética do seu sorriso.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {specialties.map((spec, index) => (
                 <Card
                   key={spec.title}
-                  className="bg-card rounded-2xl shadow-lg text-center border-t-4 border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 fade-in-up"
-                   style={{ animationDelay: `${index * 150 + 300}ms` }}
+                  className="bg-card rounded-2xl shadow-lg text-center border-t-4 border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                   style={{ animationDelay: `${index * 150}ms` }}
                 >
                     <div className="p-8 flex flex-col items-center">
                       <div className="p-4 bg-primary/10 rounded-full mb-4">
@@ -187,7 +187,7 @@ export default function Home() {
                 </Card>
               ))}
             </div>
-            <div className="fade-in-up" style={{ animationDelay: '600ms' }}>
+            <div>
               <Button
                 onClick={openWhatsapp}
                 className="mt-16 inline-block text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
@@ -199,9 +199,9 @@ export default function Home() {
         </section>
         
         {/* Antes e Depois */}
-        <section className="bg-card py-20 md:py-28">
+        <section className="bg-card py-20 md:py-28 fade-in-up">
             <div className="container mx-auto px-6 flex flex-col items-center gap-12">
-                <div className="w-full text-center fade-in-up">
+                <div className="w-full text-center">
                     <p className="font-serif text-primary text-lg">Resultados Reais</p>
                     <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-8">
                         Resultados que transformam sorrisos
@@ -210,7 +210,7 @@ export default function Home() {
                 <div className="w-full lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {beforeAfterCases.map((caseItem, index) => (
                         caseItem.before && caseItem.after && (
-                          <div key={caseItem.id} className="fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
+                          <div key={caseItem.id} style={{ animationDelay: `${index * 150}ms` }}>
                             <ImageCompareSlider
                                 before={caseItem.before.imageUrl}
                                 after={caseItem.after.imageUrl}
@@ -222,7 +222,7 @@ export default function Home() {
                         )
                     ))}
                 </div>
-                <div className="w-full text-center fade-in-up" style={{ animationDelay: '300ms' }}>
+                <div className="w-full text-center">
                     <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
                     Veja um exemplo do nosso trabalho dedicado. Cada paciente recebe
                     um plano de tratamento personalizado para alcançar o melhor
@@ -240,9 +240,9 @@ export default function Home() {
 
 
         {/* Sobre a Doutora */}
-        <section id="sobre" className="py-20 md:py-28 bg-background">
+        <section id="sobre" className="py-20 md:py-28 bg-background fade-in-up">
           <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/3 relative fade-in-up">
+            <div className="md:w-1/3 relative">
                  <div className="absolute -top-4 -left-4 w-full h-full border-4 border-primary rounded-2xl transform -rotate-3"></div>
                 <Image
                     src={PlaceHolderImages[9].imageUrl}
@@ -253,7 +253,7 @@ export default function Home() {
                     data-ai-hint={PlaceHolderImages[9].imageHint}
                 />
             </div>
-            <div className="md:w-2/3 fade-in-up" style={{ animationDelay: '150ms' }}>
+            <div className="md:w-2/3">
               <p className="font-serif text-primary text-lg">Conheça a especialista</p>
               <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4">
                 Dra. Tayná Magalhães
@@ -284,18 +284,18 @@ export default function Home() {
         </section>
 
         {/* Depoimentos */}
-        <section id="depoimentos" className="bg-card py-20 md:py-28">
+        <section id="depoimentos" className="bg-card py-20 md:py-28 fade-in-up">
           <div className="container mx-auto px-6 text-center">
-            <p className="font-serif text-primary text-lg fade-in-up">Depoimentos</p>
-            <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-16 fade-in-up" style={{ animationDelay: '150ms' }}>
+            <p className="font-serif text-primary text-lg">Depoimentos</p>
+            <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-16">
               O que nossos pacientes dizem!
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <Card
                   key={index}
-                  className="bg-background p-8 rounded-2xl shadow-lg text-left fade-in-up"
-                  style={{ animationDelay: `${index * 150 + 300}ms` }}
+                  className="bg-background p-8 rounded-2xl shadow-lg text-left"
+                  style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <CardHeader className="p-0 mb-4">
                     <div className="flex items-center">
@@ -315,13 +315,13 @@ export default function Home() {
         </section>
         
         {/* Localização */}
-        <section id="localizacao" className="py-20 md:py-28 text-center bg-background">
+        <section id="localizacao" className="py-20 md:py-28 text-center bg-background fade-in-up">
             <div className="container mx-auto px-6">
-                <p className="font-serif text-primary text-lg fade-in-up">Onde estamos</p>
-                <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-12 fade-in-up" style={{ animationDelay: '150ms' }}>
+                <p className="font-serif text-primary text-lg">Onde estamos</p>
+                <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-12">
                     Venha Conhecer Nossa Clínica!
                 </h2>
-                <div className="w-full h-96 rounded-2xl shadow-xl overflow-hidden mb-8 fade-in-up" style={{ animationDelay: '300ms' }}>
+                <div className="w-full h-96 rounded-2xl shadow-xl overflow-hidden mb-8">
                     <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.971339180709!2d-38.4593430851779!3d-12.97371199085449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b204e8b0001%3A0x8f2d5c3695d52044!2sSalvador%2C%20BA!5e0!3m2!1spt-BR!2sbr!4v1678888888888!5m2!1spt-BR!2sbr"
                     width="100%"
@@ -333,7 +333,7 @@ export default function Home() {
                     ></iframe>
                 </div>
                 <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
-                    <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4 fade-in-up" style={{ animationDelay: '450ms' }}>
+                    <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4" style={{ animationDelay: '450ms' }}>
                         <MapPin className="text-primary mt-1" size={24}/>
                         <div>
                             <h3 className="font-bold text-lg text-foreground">Endereço</h3>
@@ -351,7 +351,7 @@ export default function Home() {
                             </a>
                         </div>
                     </div>
-                     <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4 fade-in-up" style={{ animationDelay: '600ms' }}>
+                     <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4" style={{ animationDelay: '600ms' }}>
                         <Clock className="text-primary mt-1" size={24}/>
                         <div>
                             <h3 className="font-bold text-lg text-foreground">Horário de Funcionamento</h3>
