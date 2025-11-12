@@ -3,7 +3,14 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Instagram, Facebook } from 'lucide-react';
+import { Instagram, Facebook, Star, Clock, MapPin, Phone } from 'lucide-react';
+import Link from 'next/link';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 
 const whatsappUrl =
   'https://api.whatsapp.com/send?phone=5571996485189&text=Ol%C3%A1%20vim%20pelo%20site,%20gostaria%20de%20agendar%20uma%20autoavalia%C3%A7%C3%A3o.';
@@ -47,271 +54,342 @@ const testimonials = [
   },
 ];
 
+const navLinks = [
+    { href: "#especialidades", label: "Especialidades" },
+    { href: "#sobre", label: "Sobre" },
+    { href: "#depoimentos", label: "Depoimentos" },
+    { href: "#localizacao", label: "Localização" },
+]
+
 export default function Home() {
   const openWhatsapp = () => {
     window.open(whatsappUrl, '_blank');
   };
 
   return (
-    <div className="bg-brand-50 font-sans text-gray-800 antialiased">
-      <header className="bg-white shadow-md sticky top-0 z-50">
-        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold text-secondary font-serif">
+    <div className="bg-background font-sans text-foreground antialiased overflow-x-hidden">
+      <header className="bg-background/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
+        <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
+          <Link href="/" className="text-2xl font-bold text-secondary font-serif">
             Dra. Tayná Magalhães
-          </a>
+          </Link>
+          <div className="hidden md:flex items-center gap-6">
+            {navLinks.map(link => (
+                 <Link key={link.href} href={link.href} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
+                    {link.label}
+                 </Link>
+            ))}
+          </div>
           <Button
             onClick={openWhatsapp}
             className="text-white px-6 py-2 rounded-full font-semibold transition duration-300 text-sm shadow-lg pulse-button bg-primary hover:bg-secondary"
           >
-            Agende sua Autoavaliação
+            Agende sua Avaliação
           </Button>
         </nav>
       </header>
 
       <main>
-        <section className="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary font-serif leading-tight mb-4">
-              Recupere sua <em className="italic">autoestima</em> com o Sorriso
-              dos Sonhos!
-            </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Oferecemos tratamentos periodontais e de implantes com a mais alta
-              tecnologia, focados na sua saúde e bem-estar.
-            </p>
-            <Button
-              onClick={openWhatsapp}
-              className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-xl pulse-button bg-primary hover:bg-secondary"
-            >
-              Agendar autoavaliação
-            </Button>
-          </div>
-          <div className="md:w-1/2">
-            <Image
-              src={PlaceHolderImages[0].imageUrl}
-              alt="Dra. Tayná Magalhães"
-              width={600}
-              height={600}
-              className="rounded-lg shadow-2xl w-full h-auto object-cover"
-              data-ai-hint={PlaceHolderImages[0].imageHint}
-            />
-          </div>
+        {/* Hero Section */}
+        <section className="relative bg-card pt-20 md:pt-32 pb-16 overflow-hidden">
+            <div className="absolute inset-0 opacity-5">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="a" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="scale(2) rotate(45)"><rect x="0" y="0" width="100%" height="100%" fill="hsla(0,0%,100%,1)"/><path d="M1-5.64V45.64M-5.64 1h45.64" stroke-linecap="square" stroke-width="1" stroke="hsla(26, 53%, 63%, 0.2)" fill="none"/></pattern></defs><rect width="800%" height="800%" transform="translate(0,0)" fill="url(#a)"/></svg>
+            </div>
+            <div className="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center relative">
+                <div className="text-center md:text-left">
+                    <p className="text-primary font-serif text-xl mb-2">Recupere sua autoestima</p>
+                    <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary font-serif leading-tight mb-6">
+                        Através do Sorriso!
+                    </h1>
+                    <p className="text-lg text-muted-foreground mb-8 max-w-lg mx-auto md:mx-0">
+                        Com resultados de excelência e um tratamento personalizado para o seu sorriso, vamos juntos elevar sua autoestima e garantir que você tenha motivos para sorrir com confiança!
+                    </p>
+                    <Button
+                    onClick={openWhatsapp}
+                    className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-xl pulse-button bg-primary hover:bg-secondary"
+                    >
+                        Fale com um especialista agora
+                    </Button>
+                </div>
+                <div className="relative h-[400px] md:h-[600px]">
+                    <div className="absolute inset-0 -bottom-10 -right-10">
+                        <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl"></div>
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute w-full h-full opacity-30 text-primary">
+                            <path fill="currentColor" d="M48.5,-59.9C62.9,-51.9,74.9,-37.2,77.9,-20.9C80.8,-4.6,74.6,13.3,64.8,26.7C55,40.1,41.5,49,27.5,56.8C13.5,64.6,-1.1,71.3,-15.9,69.2C-30.8,67.1,-46,56.3,-56.9,43.2C-67.8,30,-74.4,14.5,-73.4,0C-72.3,-14.6,-63.5,-29.2,-52.1,-40.5C-40.7,-51.8,-26.7,-60,-12.3,-64.1C2.1,-68.2,16.8,-67.9,29.3,-67.1C41.7,-66.2,52,-65,48.5,-59.9Z" transform="translate(100 100)" />
+                        </svg>
+                    </div>
+                     <Image
+                        src={PlaceHolderImages[0].imageUrl}
+                        alt="Dra. Tayná Magalhães"
+                        fill
+                        className="rounded-lg shadow-2xl object-cover object-top"
+                        data-ai-hint={PlaceHolderImages[0].imageHint}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                </div>
+            </div>
         </section>
 
-        <section className="bg-card py-16 md:py-20">
+        {/* Especialidades */}
+        <section id="especialidades" className="py-20 md:py-28 bg-background">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold font-serif text-foreground mb-12">
-              Nossas Especialidades
+            <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4">
+              Estética Odontológica Personalizada
             </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-16">
+             Nossas especialidades são focadas em devolver a função e a estética do seu sorriso.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {specialties.map((spec) => (
-                <div
+              {specialties.map((spec, index) => (
+                <Card
                   key={spec.title}
-                  className="bg-white p-8 rounded-lg shadow-lg text-center"
+                  className="bg-card p-6 rounded-2xl shadow-lg text-center border-t-4 border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 fade-in-up"
+                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <Image
-                    src={spec.image.imageUrl}
-                    alt={spec.title}
-                    width={100}
-                    height={100}
-                    className="mx-auto mb-4 rounded-full"
-                    data-ai-hint={spec.image.imageHint}
-                  />
-                  <h3 className="text-xl font-bold font-serif text-secondary mb-3">
-                    {spec.title}
-                  </h3>
-                  <p className="text-gray-600">{spec.description}</p>
-                </div>
+                    <div className="mb-4 inline-block p-4 bg-primary/10 rounded-full">
+                        <Image
+                            src={spec.image.imageUrl}
+                            alt={spec.title}
+                            width={50}
+                            height={50}
+                            className="rounded-full"
+                            data-ai-hint={spec.image.imageHint}
+                        />
+                    </div>
+                    <h3 className="text-xl font-bold font-serif text-secondary mb-3">
+                        {spec.title}
+                    </h3>
+                    <p className="text-muted-foreground">{spec.description}</p>
+                </Card>
               ))}
             </div>
             <Button
               onClick={openWhatsapp}
-              className="mt-12 inline-block text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
+              className="mt-16 inline-block text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
             >
               Quero agendar minha avaliação
             </Button>
           </div>
         </section>
-
-        <section className="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row-reverse items-center gap-12">
-          <div className="md:w-1/2">
-            <h2 className="text-3xl font-bold font-serif text-foreground mb-6">
-              Resultados que transformam sorrisos
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Veja um exemplo do nosso trabalho dedicado. Cada paciente recebe
-              um plano de tratamento personalizado para alcançar o melhor
-              resultado possível, unindo saúde e estética.
-            </p>
-            <Button
-              onClick={openWhatsapp}
-              className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
-            >
-              Eu também quero transformar meu sorriso
-            </Button>
-          </div>
-          <div className="md:w-1/2">
-            <Image
-              src={PlaceHolderImages[4].imageUrl}
-              alt="Imagem de Antes e Depois de um tratamento"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-2xl w-full h-auto object-cover"
-              data-ai-hint={PlaceHolderImages[4].imageHint}
-            />
-          </div>
-        </section>
-
-        <section className="bg-card py-16 md:py-20">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold font-serif text-foreground mb-12">
-              Confira mais procedimentos
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {PlaceHolderImages.slice(5, 9).map((image) => (
-                <Image
-                  key={image.id}
-                  src={image.imageUrl}
-                  alt={`Imagem de caso clínico ${image.id}`}
-                  width={400}
-                  height={400}
-                  className="rounded-lg shadow-md w-full h-auto object-cover"
-                  data-ai-hint={image.imageHint}
-                />
-              ))}
+        
+        {/* Antes e Depois */}
+        <section className="bg-card py-20 md:py-28">
+            <div className="container mx-auto px-6 flex flex-col lg:flex-row-reverse items-center gap-12">
+                <div className="lg:w-1/2 text-center lg:text-left">
+                    <p className="font-serif text-primary text-lg">Resultados Reais</p>
+                    <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-6">
+                        Resultados que transformam sorrisos
+                    </h2>
+                    <p className="text-lg text-muted-foreground mb-8">
+                    Veja um exemplo do nosso trabalho dedicado. Cada paciente recebe
+                    um plano de tratamento personalizado para alcançar o melhor
+                    resultado possível, unindo saúde e estética.
+                    </p>
+                    <Button
+                        onClick={openWhatsapp}
+                        className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
+                    >
+                        Eu também quero transformar meu sorriso
+                    </Button>
+                </div>
+                <div className="lg:w-1/2 w-full grid grid-cols-2 gap-4">
+                     <Image
+                        src={PlaceHolderImages[4].imageUrl}
+                        alt="Imagem de Antes e Depois de um tratamento"
+                        width={600}
+                        height={400}
+                        className="rounded-2xl shadow-xl w-full h-auto object-cover col-span-2"
+                        data-ai-hint={PlaceHolderImages[4].imageHint}
+                        />
+                    {PlaceHolderImages.slice(5, 7).map((image) => (
+                        <Image
+                        key={image.id}
+                        src={image.imageUrl}
+                        alt={`Imagem de caso clínico ${image.id}`}
+                        width={400}
+                        height={400}
+                        className="rounded-2xl shadow-md w-full h-auto object-cover aspect-square"
+                        data-ai-hint={image.imageHint}
+                        />
+                    ))}
+                </div>
             </div>
-            <Button
-              onClick={openWhatsapp}
-              className="mt-12 inline-block text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
-            >
-              Agendar minha autoavaliação
-            </Button>
+        </section>
+
+
+        {/* Sobre a Doutora */}
+        <section id="sobre" className="py-20 md:py-28 bg-background">
+          <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div className="md:w-1/3 relative">
+                 <div className="absolute -top-4 -left-4 w-full h-full border-4 border-primary rounded-2xl transform -rotate-3"></div>
+                <Image
+                    src={PlaceHolderImages[9].imageUrl}
+                    alt="Retrato da Dra. Tayná Magalhães"
+                    width={400}
+                    height={500}
+                    className="rounded-2xl shadow-2xl w-full h-auto object-cover relative z-10"
+                    data-ai-hint={PlaceHolderImages[9].imageHint}
+                />
+            </div>
+            <div className="md:w-2/3">
+              <p className="font-serif text-primary text-lg">Conheça a especialista</p>
+              <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4">
+                Dra. Tayná Magalhães
+              </h2>
+              <p className="text-lg font-semibold text-secondary mb-2">
+                Esp. em Periodontia | Cirurgia Oral e Periodontal | Implantes
+              </p>
+              <p className="text-md font-semibold text-gray-700 mb-6">
+                CRO-BA 25109
+              </p>
+              <p className="text-muted-foreground mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <p className="text-muted-foreground">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+              </p>
+              <p className="font-serif text-4xl text-primary/70 mt-6">
+                Tayná Magalhães
+              </p>
+            </div>
           </div>
         </section>
 
-        <section className="container mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-1/3">
-            <Image
-              src={PlaceHolderImages[9].imageUrl}
-              alt="Retrato da Dra. Tayná Magalhães"
-              width={400}
-              height={500}
-              className="rounded-lg shadow-2xl w-full h-auto object-cover"
-              data-ai-hint={PlaceHolderImages[9].imageHint}
-            />
-          </div>
-          <div className="md:w-2/3">
-            <h2 className="text-3xl font-bold font-serif text-foreground mb-4">
-              Conheça a Dra. Tayná Magalhães
-            </h2>
-            <p className="text-lg font-semibold text-secondary mb-2">
-              Esp. em Periodontia | Cirurgia Oral e Periodontal | Implantes
-            </p>
-            <p className="text-md font-semibold text-gray-700 mb-6">
-              CRO-BA 25109
-            </p>
-            <p className="text-gray-600 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p className="text-gray-600">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
-            <p className="font-serif text-3xl text-primary mt-6">
-              Tayná Magalhães
-            </p>
-          </div>
-        </section>
-
-        <section className="bg-card py-16 md:py-20">
+        {/* Depoimentos */}
+        <section id="depoimentos" className="bg-card py-20 md:py-28">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold font-serif text-foreground mb-12">
-              Veja o que nossos pacientes dizem!
+            <p className="font-serif text-primary text-lg">Depoimentos</p>
+            <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-16">
+              O que nossos pacientes dizem!
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div
+                <Card
                   key={index}
-                  className="bg-white p-8 rounded-lg shadow-lg text-left"
+                  className="bg-background p-8 rounded-2xl shadow-lg text-left"
                 >
-                  <p className="text-gray-600 mb-4">{testimonial.quote}</p>
-                  <p className="font-bold text-secondary">
-                    - {testimonial.author}
-                  </p>
-                </div>
+                  <CardHeader className="p-0 mb-4">
+                    <div className="flex items-center">
+                        {[...Array(5)].map((_, i) => <Star key={i} className="text-yellow-400 fill-yellow-400" size={20}/>)}
+                    </div>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <p className="text-muted-foreground mb-4 italic">{testimonial.quote}</p>
+                    <p className="font-bold text-secondary">
+                      - {testimonial.author}
+                    </p>
+                  </CardContent>
+                </Card>
               ))}
             </div>
-            <Button
-              onClick={openWhatsapp}
-              className="mt-12 inline-block text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
-            >
-              Agende você também
-            </Button>
           </div>
+        </section>
+        
+        {/* Localização */}
+        <section id="localizacao" className="py-20 md:py-28 text-center bg-background">
+            <div className="container mx-auto px-6">
+                <p className="font-serif text-primary text-lg">Onde estamos</p>
+                <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-12">
+                    Venha Conhecer Nossa Clínica!
+                </h2>
+                <div className="w-full h-96 rounded-2xl shadow-xl overflow-hidden mb-8">
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.971339180709!2d-38.4593430851779!3d-12.97371199085449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b204e8b0001%3A0x8f2d5c3695d52044!2sSalvador%2C%20BA!5e0!3m2!1spt-BR!2sbr!4v1678888888888!5m2!1spt-BR!2sbr"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+                <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
+                    <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4">
+                        <MapPin className="text-primary mt-1" size={24}/>
+                        <div>
+                            <h3 className="font-bold text-lg text-foreground">Endereço</h3>
+                            <p className="text-muted-foreground">
+                                Av. Tancredo Neves, 2539 - Caminho das Árvores, Salvador - BA,
+                                41820-021
+                            </p>
+                             <a
+                                href="https://maps.app.goo.gl/u5X1eZ9Y8wZ6aXbX7"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block text-primary font-semibold mt-2 hover:underline"
+                            >
+                                Ver no Google Maps
+                            </a>
+                        </div>
+                    </div>
+                     <div className="bg-card p-6 rounded-lg shadow-md flex items-start gap-4">
+                        <Clock className="text-primary mt-1" size={24}/>
+                        <div>
+                            <h3 className="font-bold text-lg text-foreground">Horário de Funcionamento</h3>
+                            <p className="text-muted-foreground">
+                                Segunda a Sexta: 08:00 - 18:00<br/>
+                                Sábado: 08:00 - 12:00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section className="container mx-auto px-6 py-16 md:py-24 text-center">
-          <h2 className="text-3xl font-bold font-serif text-foreground mb-12">
-            Venha Conhecer Nossa Clínica!
-          </h2>
-          <div className="w-full h-96 rounded-lg shadow-xl overflow-hidden mb-8">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.971339180709!2d-38.4593430851779!3d-12.97371199085449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b204e8b0001%3A0x8f2d5c3695d52044!2sSalvador%2C%20BA!5e0!3m2!1spt-BR!2sbr!4v1678888888888!5m2!1spt-BR!2sbr"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <p className="text-lg text-gray-600 mb-8">
-            Av. Tancredo Neves, 2539 - Caminho das Árvores, Salvador - BA,
-            41820-021
-          </p>
-          <a
-            href="https://maps.app.goo.gl/u5X1eZ9Y8wZ6aXbX7"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-primary text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-secondary transition duration-300 shadow-lg"
-          >
-            Ver no Google Maps
-          </a>
-        </section>
       </main>
 
-      <footer className="bg-gradient-to-r from-[#E0A45E] to-[#AE5E55] text-white py-12">
-        <div className="container mx-auto px-6 text-center">
-          <a href="#" className="text-3xl font-bold text-white font-serif">
-            Dra. Tayná Magalhães
-          </a>
-          <p className="text-gray-200 mt-2">
-            Esp. em Periodontia | Cirurgia Oral e Periodontal | Implantes
-          </p>
-          <p className="text-gray-300 text-sm mt-1">CRO-BA 25109</p>
-          <div className="flex justify-center gap-6 my-6">
-            <a
-              href="#"
-              className="text-gray-200 hover:text-white transition duration-300"
-            >
-              <Instagram />
-            </a>
-            <a
-              href="#"
-              className="text-gray-200 hover:text-white transition duration-300"
-            >
-              <Facebook />
-            </a>
-          </div>
-          <p className="text-gray-200 text-sm">
-            &copy; {new Date().getFullYear()} Dra. Tayná Magalhães. Todos os
-            direitos reservados.
-          </p>
+      <footer className="bg-foreground text-white py-16">
+        <div className="container mx-auto px-6 grid md:grid-cols-3 gap-10 text-center md:text-left">
+            <div>
+                 <Link href="/" className="text-3xl font-bold text-white font-serif mb-4 inline-block">
+                    Dra. Tayná Magalhães
+                </Link>
+                <p className="text-gray-400">
+                    Recupere sua autoestima com o sorriso dos seus sonhos.
+                </p>
+            </div>
+            <div>
+                <h4 className="font-bold text-lg mb-4 text-white">Navegação</h4>
+                <ul className="space-y-2">
+                    {navLinks.map(link => (
+                        <li key={link.href}>
+                            <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">{link.label}</Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <div>
+                <h4 className="font-bold text-lg mb-4 text-white">Redes Sociais</h4>
+                 <div className="flex justify-center md:justify-start gap-6 mb-6">
+                    <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition duration-300"
+                    aria-label="Instagram"
+                    >
+                    <Instagram />
+                    </a>
+                    <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition duration-300"
+                    aria-label="Facebook"
+                    >
+                    <Facebook />
+                    </a>
+                </div>
+                <p className="text-gray-400 text-sm">CRO-BA 25109</p>
+            </div>
+        </div>
+        <div className="container mx-auto px-6 mt-10 border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
+             <p>
+                &copy; {new Date().getFullYear()} Dra. Tayná Magalhães. Todos os
+                direitos reservados.
+            </p>
         </div>
       </footer>
     </div>
