@@ -210,9 +210,8 @@ export default function Home() {
                 <div className="w-full lg:w-3/4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {beforeAfterCases.map((caseItem, index) => (
                         caseItem.before && caseItem.after && (
-                          <div className="fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
+                          <div key={caseItem.id} className="fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
                             <ImageCompareSlider
-                                key={caseItem.id}
                                 before={caseItem.before.imageUrl}
                                 after={caseItem.after.imageUrl}
                                 alt={`Comparativo do ${caseItem.id}`}
