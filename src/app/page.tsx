@@ -100,7 +100,7 @@ export default function Home() {
   return (
     <div className="bg-background font-sans text-foreground antialiased overflow-x-hidden">
       <header className="bg-white/10 backdrop-blur-lg shadow-lg sticky top-0 z-50">
-        <nav className="container mx-auto px-6 py-6 flex justify-between items-center">
+        <nav className="container mx-auto px-6 py-8 flex justify-between items-center">
           <Link href="/" className="text-2xl font-bold text-secondary font-serif">
             Dra. Tayná Magalhães
           </Link>
@@ -417,4 +417,5 @@ export default function Home() {
     
 
     
+
 
