@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Instagram, Facebook, Star, Clock, MapPin, Phone } from 'lucide-react';
+import { Instagram, Facebook, Star, Clock, MapPin, Phone, HeartPulse, Wind, Anchor } from 'lucide-react';
 import Link from 'next/link';
 import {
   Card,
@@ -23,19 +23,19 @@ const specialties = [
     title: 'Periodontia',
     description:
       'Cuidamos da saúde das suas gengivas e das estruturas que sustentam seus dentes, prevenindo e tratando doenças como gengivite e periodontite.',
-    image: PlaceHolderImages[1],
+    icon: HeartPulse,
   },
   {
     title: 'Cirurgia Oral e Periodontal',
     description:
       'Procedimentos cirúrgicos com precisão e segurança, incluindo enxertos, cirurgias gengivais estéticas e extrações complexas.',
-    image: PlaceHolderImages[2],
+    icon: Wind,
   },
   {
     title: 'Implantes',
     description:
       'A solução definitiva para a perda de dentes. Devolvemos a função e a estética do seu sorriso com implantes dentários de titânio.',
-    image: PlaceHolderImages[3],
+    icon: Anchor,
   },
 ];
 
@@ -161,14 +161,7 @@ export default function Home() {
                    style={{ animationDelay: `${index * 150}ms` }}
                 >
                     <div className="mb-4 inline-block p-4 bg-primary/10 rounded-full">
-                        <Image
-                            src={spec.image.imageUrl}
-                            alt={spec.title}
-                            width={50}
-                            height={50}
-                            className="rounded-full"
-                            data-ai-hint={spec.image.imageHint}
-                        />
+                        <spec.icon className="h-8 w-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-bold font-serif text-secondary mb-3">
                         {spec.title}
