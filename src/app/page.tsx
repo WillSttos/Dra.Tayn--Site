@@ -136,26 +136,21 @@ export default function Home() {
            <div className="absolute inset-0 bg-black/30"></div>
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-xl text-white">
-              <p className="text-xl mb-2 font-serif" style={{ color: 'hsl(var(--primary))' }}>
-                Recupere sua autoestima
-              </p>
               <h1
                 className="text-4xl md:text-6xl font-bold font-serif leading-tight mb-6"
               >
-                Através do Sorriso!
+                Recupere sua autoestima com o Sorriso dos Sonhos!
               </h1>
               <p
                 className="text-lg mb-8"
               >
-                Com resultados de excelência e um tratamento personalizado para
-                o seu sorriso, vamos juntos elevar sua autoestima e garantir que
-                você tenha motivos para sorrir com confiança!
+                Oferecemos tratamentos periodontais e de implantes com a mais alta tecnologia, focados na sua saúde e bem-estar.
               </p>
               <Button
                 onClick={openWhatsapp}
                 className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-xl pulse-button bg-primary hover:bg-secondary"
               >
-                Fale com um especialista agora
+                Agendar autoavaliação
               </Button>
             </div>
           </div>
