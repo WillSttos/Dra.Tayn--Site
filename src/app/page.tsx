@@ -141,13 +141,11 @@ export default function Home() {
               </p>
               <h1
                 className="text-4xl md:text-6xl font-bold font-serif leading-tight mb-6"
-                style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}
               >
                 Através do Sorriso!
               </h1>
               <p
                 className="text-lg mb-8"
-                style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.7)' }}
               >
                 Com resultados de excelência e um tratamento personalizado para
                 o seu sorriso, vamos juntos elevar sua autoestima e garantir que
