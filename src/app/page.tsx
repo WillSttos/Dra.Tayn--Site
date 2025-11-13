@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Instagram, Facebook, Star, Clock, MapPin, Phone, Scissors } from 'lucide-react';
+import { Instagram, Star, Clock, MapPin, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import {
   Card,
@@ -14,6 +14,15 @@ import {
 } from '@/components/ui/card';
 import { ImageCompareSlider } from '@/components/ui/image-compare-slider';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTrigger,
+  SheetClose,
+} from '@/components/ui/sheet';
+import React from 'react';
+
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -144,10 +153,12 @@ export default function Home() {
   return (
     <div className="bg-background font-sans text-foreground antialiased overflow-x-hidden">
       <header className="bg-white/10 backdrop-blur-lg shadow-lg fixed w-full top-0 z-50">
-        <nav className="container mx-auto px-6 py-8 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-secondary font-serif">
+        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
+          <Link href="/" className="text-xl md:text-2xl font-bold text-secondary font-serif">
             Dra. Tayná Magalhães
           </Link>
+
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map(link => (
                  <Link key={link.href} href={link.href} className="text-sm font-medium text-foreground/90 hover:text-primary transition-colors">
@@ -155,27 +166,62 @@ export default function Home() {
                  </Link>
             ))}
           </div>
+          
           <Button
             onClick={openWhatsapp}
             variant="custom"
-            className="custom-btn px-6 py-2 rounded-full font-semibold shadow-lg pulse-button transition-transform duration-300 hover:scale-105 active:scale-105"
+            className="hidden md:flex custom-btn px-6 py-2 rounded-full font-semibold shadow-lg transition-transform duration-300 hover:scale-105 active:scale-105"
           >
             Agende sua Avaliação
           </Button>
+
+          {/* Mobile Nav */}
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Abrir menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent>
+                <SheetHeader>
+                  <Link href="/" className="text-2xl font-bold text-secondary font-serif mb-8">
+                    Dra. Tayná Magalhães
+                  </Link>
+                </SheetHeader>
+                <div className="flex flex-col space-y-4">
+                  {navLinks.map(link => (
+                    <SheetClose asChild key={link.href}>
+                      <Link href={link.href} className="text-lg font-medium text-foreground/90 hover:text-primary transition-colors">
+                        {link.label}
+                      </Link>
+                    </SheetClose>
+                   ))}
+                </div>
+                 <Button
+                    onClick={openWhatsapp}
+                    variant="custom"
+                    className="mt-8 w-full custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-xl transition-transform duration-300 hover:scale-105 active:scale-105"
+                  >
+                    Agendar autoavaliação
+                  </Button>
+              </SheetContent>
+            </Sheet>
+          </div>
         </nav>
       </header>
 
       <main>
         {/* Hero Section */}
-        <section className="relative w-full h-screen md:h-auto flex items-center md:items-start">
-            <div className="absolute inset-0 md:relative w-full h-full md:h-auto">
+        <section className="relative w-full h-screen flex items-center justify-center">
+            <div className="absolute inset-0">
                 {heroBannerDesktop && (
                     <Image
                     src={heroBannerDesktop.imageUrl}
                     alt={heroBannerDesktop.description}
-                    width={1920}
-                    height={1080}
-                    className="object-cover w-full h-auto hidden md:block"
+                    fill
+                    className="object-cover w-full h-full hidden md:block"
                     data-ai-hint={heroBannerDesktop.imageHint}
                     priority
                     />
@@ -191,8 +237,8 @@ export default function Home() {
                     />
                 )}
             </div>
-            <div className="relative z-10 w-full container mx-auto px-6 mt-auto md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:mt-0 pb-20 md:pb-0">
-              <div className="max-w-xl text-center md:text-left">
+            <div className="relative z-10 w-full container mx-auto px-6 flex flex-col items-center text-center md:items-start md:text-left md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 mt-auto pb-20 md:pb-0 md:mt-0">
+              <div className="max-w-xl">
                 <AnimateOnScroll>
                     <h1 className="text-gradient text-4xl md:text-6xl font-bold font-serif leading-tight mb-6">
                       Recupere sua <em>autoestima</em> com o Sorriso dos Sonhos!
@@ -311,8 +357,8 @@ export default function Home() {
 
         {/* Sobre a Doutora */}
         <section id="sobre" className="py-20 md:py-28 bg-background">
-          <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-20">
-            <AnimateOnScroll className="md:w-1/3 relative" direction="left">
+          <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12 md:gap-20">
+            <AnimateOnScroll className="md:w-1/3 relative w-full max-w-sm" direction="left">
                  <div className="absolute -top-4 -left-4 w-full h-full border-4 border-primary rounded-2xl transform -rotate-3"></div>
                 <Image
                     src={PlaceHolderImages.find(p => p.id === 'dra-tayn-retrato')?.imageUrl || ''}
@@ -408,7 +454,7 @@ export default function Home() {
                         style={{ border: 0 }}
                         allowFullScreen={true}
                         loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
+                        referrerPolicy="no-referrer-downgrade"
                         ></iframe>
                     </div>
                 </AnimateOnScroll>
