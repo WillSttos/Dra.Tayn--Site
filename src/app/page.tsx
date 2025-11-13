@@ -144,6 +144,7 @@ export default function Home() {
           </div>
           <Button
             onClick={openWhatsapp}
+            variant="custom"
             className="custom-btn px-6 py-2 rounded-full font-semibold shadow-lg pulse-button transition-transform duration-300 hover:scale-105"
           >
             Agende sua Avaliação
@@ -185,6 +186,7 @@ export default function Home() {
                 <AnimateOnScroll delay={0.4}>
                   <Button
                     onClick={openWhatsapp}
+                    variant="custom"
                     className="custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-xl pulse-button transition-transform duration-300 hover:scale-105"
                   >
                     Agendar autoavaliação
@@ -229,6 +231,7 @@ export default function Home() {
              <AnimateOnScroll delay={0.3}>
               <Button
                 onClick={openWhatsapp}
+                variant="custom"
                 className="custom-btn mt-16 inline-block px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
               >
                 Quero agendar minha avaliação
@@ -272,6 +275,7 @@ export default function Home() {
                         </p>
                         <Button
                             onClick={openWhatsapp}
+                            variant="custom"
                             className="custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
                         >
                             Eu também quero transformar meu sorriso
@@ -375,7 +379,7 @@ export default function Home() {
                 <AnimateOnScroll>
                     <div className="w-full h-96 rounded-2xl shadow-xl overflow-hidden mb-8">
                         <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.971339180709!2d-38.4593430851779!3d-12.97371199085449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b204e8b0001%3A0x8f2d5c3695d52044!2sSalvador%2C%20BA!5e0!3m2!1spt-BR!2sbr!4v1678888888888!5m2!1spt-BR!2sbr"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.971339180709!2d-38.4593430851779!3d-12.97371199085449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b204e8b0001%3A0x8f2d5c3695d52044!2sSalvador%2C%2BA!5e0!3m2!1spt-BR!2sbr!4v1678888888888!5m2!1spt-BR!2sbr"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
