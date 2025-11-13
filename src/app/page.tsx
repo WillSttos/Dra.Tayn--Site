@@ -144,7 +144,7 @@ export default function Home() {
           </div>
           <Button
             onClick={openWhatsapp}
-            className="text-white px-6 py-2 rounded-full font-semibold transition duration-300 text-sm shadow-lg pulse-button bg-primary hover:bg-secondary"
+            className="custom-btn px-6 py-2 rounded-full font-semibold shadow-lg pulse-button transition-transform duration-300 hover:scale-105"
           >
             Agende sua Avaliação
           </Button>
@@ -185,7 +185,7 @@ export default function Home() {
                 <AnimateOnScroll delay={0.4}>
                   <Button
                     onClick={openWhatsapp}
-                    className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-xl pulse-button bg-primary hover:bg-secondary"
+                    className="custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-xl pulse-button transition-transform duration-300 hover:scale-105"
                   >
                     Agendar autoavaliação
                   </Button>
@@ -229,7 +229,7 @@ export default function Home() {
              <AnimateOnScroll delay={0.3}>
               <Button
                 onClick={openWhatsapp}
-                className="mt-16 inline-block text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
+                className="custom-btn mt-16 inline-block px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
               >
                 Quero agendar minha avaliação
               </Button>
@@ -272,7 +272,7 @@ export default function Home() {
                         </p>
                         <Button
                             onClick={openWhatsapp}
-                            className="text-white px-8 py-3 h-auto rounded-full font-bold text-lg transition duration-300 shadow-lg bg-primary hover:bg-secondary"
+                            className="custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
                         >
                             Eu também quero transformar meu sorriso
                         </Button>
@@ -483,3 +483,4 @@ export default function Home() {
     
 
     
+

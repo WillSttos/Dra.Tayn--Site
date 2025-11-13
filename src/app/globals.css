@@ -90,3 +90,19 @@
     left: var(--position);
   }
 }
+
+@layer components {
+  .custom-btn {
+    background-color: #e0a45e;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s, transform 0.3s;
+  }
+  .custom-btn:hover {
+    background-color: #ae5e55;
+    box-shadow: 0 0 0 5px #ae5e555f;
+    color: #fff;
+  }
+}
