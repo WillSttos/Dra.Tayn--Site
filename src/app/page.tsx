@@ -64,7 +64,7 @@ const SurgeryIcon = (props: React.SVGProps<SVGSVGElement>) => (
         <path d="M13.833,5.7c-5.239,1.856-6.765,8.42-5.966,13.733c0.075,0.496,0.501,0.852,0.988,0.852c0.049,0,0.1-0.004,0.149-0.011 c0.547-0.083,0.923-0.592,0.841-1.138C9.164,14.608,10.33,9.062,14.501,7.584c0.521-0.185,0.793-0.756,0.608-1.276 C14.926,5.788,14.357,5.515,13.833,5.7z" />
         <path d="M24.136,16.582c-0.127-0.294-0.248-0.591-0.365-0.891c-0.201-0.516-0.783-0.77-1.295-0.568 c-0.515,0.2-0.769,0.78-0.568,1.295c0.125,0.321,0.256,0.64,0.393,0.957c0.163,0.378,0.531,0.604,0.918,0.604 c0.133,0,0.267-0.026,0.396-0.082C24.121,17.678,24.355,17.09,24.136,16.582z" />
         <path d="M22.638,12.02c-0.071-0.313-0.139-0.629-0.2-0.945c-0.104-0.543-0.632-0.906-1.171-0.792 c-0.543,0.104-0.897,0.629-0.792,1.171c0.065,0.34,0.137,0.677,0.214,1.012c0.105,0.464,0.518,0.777,0.974,0.777 c0.074,0,0.149-0.008,0.224-0.025C22.425,13.094,22.761,12.558,22.638,12.02z" />
-        <path d="M21.033,8.304c0.552-0.022,0.98-0.488,0.958-1.04c-0.013-0.32-0.021-0.642-0.024-0.965c-0.005-0.549-0.451-0.991-1-0.991 c-0.003,0-0.006,0-0.009,0c-0.553,0.005-0.996,0.456-0.991,1.009c0.003,0.345,0.012,0.688,0.026,1.029 c0.022,0.538,0.465,0.959,0.998,0.959C21.006,8.305,21.02,8.305,21.033,8.304z" />
+        <path d="M21.033,8.304c0.552-0.022,0.980-0.488,0.958-1.04c-0.013-0.32-0.021-0.642-0.024-0.965c-0.005-0.549-0.451-0.991-1-0.991 c-0.003,0-0.006,0-0.009,0c-0.553,0.005-0.996,0.456-0.991,1.009c0.003,0.345,0.012,0.688,0.026,1.029 c0.022,0.538,0.465,0.959,0.998,0.959C21.006,8.305,21.02,8.305,21.033,8.304z" />
         <path d="M25.903,19.998c-0.288-0.473-0.905-0.622-1.374-0.333c-0.472,0.288-0.621,0.903-0.333,1.374 c0.179,0.293,0.362,0.582,0.551,0.87c0.191,0.292,0.511,0.451,0.837,0.451c0.188,0,0.379-0.053,0.548-0.164 c0.462-0.303,0.59-0.923,0.287-1.385C26.242,20.543,26.07,20.272,25.903,19.998z" />
         <path d="M36.978,30.507c-0.283-0.157-0.563-0.318-0.839-0.483c-0.474-0.284-1.089-0.127-1.371,0.348s-0.127,1.088,0.348,1.371 c0.294,0.175,0.591,0.346,0.892,0.513c0.153,0.086,0.32,0.126,0.484,0.126c0.352,0,0.692-0.186,0.875-0.515 C37.635,31.384,37.46,30.775,36.978,30.507z" />
         <path d="M41.371,32.523c-0.303-0.112-0.604-0.229-0.903-0.351c-0.51-0.207-1.094,0.038-1.303,0.551 c-0.208,0.511,0.039,1.095,0.551,1.303c0.316,0.129,0.636,0.252,0.958,0.372c0.115,0.043,0.232,0.063,0.349,0.063 c0.405,0,0.787-0.249,0.938-0.651C42.152,33.291,41.889,32.715,41.371,32.523z" />
@@ -138,7 +138,8 @@ export default function Home() {
     window.open(whatsappUrl, '_blank');
   };
 
-  const heroBanner = PlaceHolderImages.find(p => p.id === 'hero-banner-desktop');
+  const heroBannerDesktop = PlaceHolderImages.find(p => p.id === 'hero-banner-desktop');
+  const heroBannerMobile = PlaceHolderImages.find(p => p.id === 'hero-banner-mobile');
 
   return (
     <div className="bg-background font-sans text-foreground antialiased overflow-x-hidden">
@@ -167,19 +168,30 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <section className="relative w-full flex items-center">
-            {heroBanner && (
-              <div className="relative w-full h-auto">
-                <Image
-                  src={heroBanner.imageUrl}
-                  alt={heroBanner.description}
-                  width={1920}
-                  height={1080}
-                  className="object-cover w-full h-auto"
-                  data-ai-hint={heroBanner.imageHint}
-                  priority
-                />
-              </div>
-            )}
+            <div className="relative w-full h-auto">
+                {heroBannerDesktop && (
+                    <Image
+                    src={heroBannerDesktop.imageUrl}
+                    alt={heroBannerDesktop.description}
+                    width={1920}
+                    height={1080}
+                    className="object-cover w-full h-auto hidden md:block"
+                    data-ai-hint={heroBannerDesktop.imageHint}
+                    priority
+                    />
+                )}
+                {heroBannerMobile && (
+                    <Image
+                    src={heroBannerMobile.imageUrl}
+                    alt={heroBannerMobile.description}
+                    width={750}
+                    height={1334}
+                    className="object-cover w-full h-auto md:hidden"
+                    data-ai-hint={heroBannerMobile.imageHint}
+                    priority
+                    />
+                )}
+            </div>
             <div className="container mx-auto px-6 absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <div className="max-w-xl">
                 <AnimateOnScroll>
@@ -497,5 +509,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     

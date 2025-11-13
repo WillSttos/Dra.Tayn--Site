@@ -7,6 +7,12 @@
       "imageHint": "dentist banner"
     },
     {
+      "id": "hero-banner-mobile",
+      "description": "Banner principal para mobile com a Dra. Tayná Magalhães.",
+      "imageUrl": "/BANNER-THAYNA-HERO-MOBILE.jpg",
+      "imageHint": "dentist banner mobile"
+    },
+    {
       "id": "periodontia",
       "description": "Ícone para periodontia.",
       "imageUrl": "https://images.unsplash.com/photo-1615592602923-9fb437226763?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0b290aCUyMGd1bXN8ZW58MHx8fHwxNzYyOTUxMjExfDA&ixlib=rb-4.1.0&q=80&w=1080",
