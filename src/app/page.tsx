@@ -402,7 +402,7 @@ export default function Home() {
                 <AnimateOnScroll>
                     <div className="w-full h-96 rounded-2xl shadow-xl overflow-hidden mb-8">
                         <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.971339180709!2d-38.4593430851779!3d-12.97371199085449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b204e8b0001%3A0x8f2d5c3695d52044!2sSalvador%2C%2BA!5e0!3m2!1spt-BR!2sbr!4v1678888888888!5m2!1spt-BR!2sbr"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.971339180709!2d-38.45934308889953!3d-12.97371199079374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b204e8b0001%3A0x8f2d5c3695d52044!2sCEO%20Salvador%20Shopping!5e0!3m2!1sen!2sbr"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
@@ -423,7 +423,7 @@ export default function Home() {
                                     41820-021
                                 </p>
                                 <a
-                                    href="https://maps.app.goo.gl/u5X1eZ9Y8wZ6aXbX7"
+                                    href="https://www.google.com/maps/place/CEO+Salvador+Shopping/@-12.973712,-38.4593431,17z/data=!3m1!4b1!4m6!3m5!1s0x7161b204e8b0001:0x8f2d5c3695d52044!8m2!3d-12.973712!4d-38.4567682!16s%2Fg%2F11b6xl_j_2?entry=ttu"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-block text-primary font-semibold mt-2 hover:underline"
@@ -508,9 +508,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
-
-    
