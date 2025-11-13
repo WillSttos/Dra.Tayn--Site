@@ -158,7 +158,7 @@ export default function Home() {
           <Button
             onClick={openWhatsapp}
             variant="custom"
-            className="custom-btn px-6 py-2 rounded-full font-semibold shadow-lg pulse-button transition-transform duration-300 hover:scale-105"
+            className="custom-btn px-6 py-2 rounded-full font-semibold shadow-lg pulse-button transition-transform duration-300 hover:scale-105 active:scale-105"
           >
             Agende sua Avaliação
           </Button>
@@ -167,8 +167,8 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative w-full flex items-center">
-            <div className="relative w-full h-auto">
+        <section className="relative w-full h-screen md:h-auto flex items-center md:items-start">
+            <div className="absolute inset-0 md:relative w-full h-full md:h-auto">
                 {heroBannerDesktop && (
                     <Image
                     src={heroBannerDesktop.imageUrl}
@@ -184,16 +184,15 @@ export default function Home() {
                     <Image
                     src={heroBannerMobile.imageUrl}
                     alt={heroBannerMobile.description}
-                    width={750}
-                    height={1334}
-                    className="object-cover w-full h-auto md:hidden"
+                    fill
+                    className="object-cover w-full h-full md:hidden"
                     data-ai-hint={heroBannerMobile.imageHint}
                     priority
                     />
                 )}
             </div>
-            <div className="container mx-auto px-6 absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <div className="max-w-xl">
+            <div className="relative z-10 w-full container mx-auto px-6 mt-auto md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:mt-0 pb-20 md:pb-0">
+              <div className="max-w-xl text-center md:text-left">
                 <AnimateOnScroll>
                     <h1 className="text-gradient text-4xl md:text-6xl font-bold font-serif leading-tight mb-6">
                       Recupere sua <em>autoestima</em> com o Sorriso dos Sonhos!
@@ -211,7 +210,7 @@ export default function Home() {
                   <Button
                     onClick={openWhatsapp}
                     variant="custom"
-                    className="custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-xl pulse-button transition-transform duration-300 hover:scale-105"
+                    className="custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-xl pulse-button transition-transform duration-300 hover:scale-105 active:scale-105"
                   >
                     Agendar autoavaliação
                   </Button>
@@ -256,7 +255,7 @@ export default function Home() {
               <Button
                 onClick={openWhatsapp}
                 variant="custom"
-                className="custom-btn mt-16 inline-block px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                className="custom-btn mt-16 inline-block px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105 active:scale-105"
               >
                 Quero agendar minha avaliação
               </Button>
@@ -300,7 +299,7 @@ export default function Home() {
                         <Button
                             onClick={openWhatsapp}
                             variant="custom"
-                            className="custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                            className="custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105 active:scale-105"
                         >
                             Eu também quero transformar meu sorriso
                         </Button>
@@ -509,6 +508,8 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
 
