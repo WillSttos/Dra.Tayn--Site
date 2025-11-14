@@ -303,7 +303,7 @@ export default function Home() {
               <Button
                 onClick={openWhatsapp}
                 variant="custom"
-                className="custom-btn mt-16 inline-block px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                className="custom-btn mt-16 inline-block px-6 md:px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
               >
                 Quero agendar minha avaliação
               </Button>
@@ -347,7 +347,7 @@ export default function Home() {
                         <Button
                             onClick={openWhatsapp}
                             variant="custom"
-                            className="custom-btn mt-16 inline-block px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                            className="custom-btn mt-16 inline-block px-6 md:px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
                         >
                             Quero agendar minha avaliação
                         </Button>
