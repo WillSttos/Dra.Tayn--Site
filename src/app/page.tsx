@@ -214,7 +214,7 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative w-full h-screen flex flex-col items-center justify-center">
+        <section className="relative w-full h-screen flex flex-col items-center">
             <div className="absolute inset-0">
                 {heroBannerDesktop && (
                     <Image
@@ -237,8 +237,8 @@ export default function Home() {
                     />
                 )}
             </div>
-            <div className="relative z-10 w-full container mx-auto px-6 flex flex-col items-center text-center md:items-start md:text-left mt-auto pb-24 md:pb-0 md:mt-0 md:static md:flex-grow md:justify-center">
-              <div className="max-w-xl">
+            <div className="relative z-10 w-full container mx-auto px-6 flex flex-col flex-grow justify-end pb-24 md:justify-center md:pb-0">
+              <div className="max-w-xl md:text-left text-center">
                 <AnimateOnScroll>
                     <h1 className="text-gradient text-4xl md:text-6xl font-bold font-serif leading-tight mb-6">
                       Recupere sua <em>autoestima</em> com o Sorriso dos Sonhos!
@@ -253,7 +253,7 @@ export default function Home() {
                     </p>
                 </AnimateOnScroll>
                 <AnimateOnScroll delay={0.4}>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center md:justify-start">
                     <Button
                       onClick={openWhatsapp}
                       variant="custom"
@@ -556,5 +556,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
