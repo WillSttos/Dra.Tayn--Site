@@ -349,7 +349,7 @@ export default function Home() {
                             variant="custom"
                             className="custom-btn mt-16 inline-block px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
                         >
-                            Eu também quero transformar meu sorriso
+                            Quero agendar minha avaliação
                         </Button>
                     </AnimateOnScroll>
                 </div>
