@@ -237,7 +237,7 @@ export default function Home() {
                     />
                 )}
             </div>
-            <div className="relative z-10 w-full container mx-auto px-6 flex flex-col items-center text-center md:items-start md:text-left mt-auto pb-20 md:pb-0 md:mt-0 md:static md:flex-grow md:justify-center">
+            <div className="relative z-10 w-full container mx-auto px-6 flex flex-col items-center text-center md:items-start md:text-left mt-auto pb-24 md:pb-0 md:mt-0 md:static md:flex-grow md:justify-center">
               <div className="max-w-xl">
                 <AnimateOnScroll>
                     <h1 className="text-gradient text-4xl md:text-6xl font-bold font-serif leading-tight mb-6">
@@ -253,13 +253,15 @@ export default function Home() {
                     </p>
                 </AnimateOnScroll>
                 <AnimateOnScroll delay={0.4}>
-                  <Button
-                    onClick={openWhatsapp}
-                    variant="custom"
-                    className="custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-xl pulse-button transition-transform duration-300 hover:scale-105 active:scale-105"
-                  >
-                    Agendar autoavaliação
-                  </Button>
+                  <div className="flex justify-center">
+                    <Button
+                      onClick={openWhatsapp}
+                      variant="custom"
+                      className="custom-btn px-6 py-2 md:px-8 md:py-3 h-auto rounded-full font-bold text-base md:text-lg shadow-xl pulse-button transition-transform duration-300 hover:scale-105 active:scale-105"
+                    >
+                      Agendar autoavaliação
+                    </Button>
+                  </div>
                 </AnimateOnScroll>
               </div>
             </div>
