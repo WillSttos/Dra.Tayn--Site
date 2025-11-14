@@ -347,7 +347,7 @@ export default function Home() {
                         <Button
                             onClick={openWhatsapp}
                             variant="custom"
-                            className="custom-btn inline-block px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                            className="custom-btn mt-16 inline-block px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
                         >
                             Eu também quero transformar meu sorriso
                         </Button>
@@ -549,7 +549,7 @@ export default function Home() {
                 <p>
                     &copy; {new Date().getFullYear()} Dra. Tayná Magalhães. Todos os
                     direitos reservados.
-                p>
+                </p>
             </div>
         </AnimateOnScroll>
       </footer>
