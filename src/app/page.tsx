@@ -237,7 +237,7 @@ export default function Home() {
                     />
                 )}
             </div>
-            <div className="relative z-10 w-full container mx-auto px-6 flex flex-col flex-grow justify-center pt-96 pb-24 md:justify-start md:pt-48 md:pb-0">
+            <div className="relative z-10 w-full container mx-auto px-6 flex flex-col flex-grow justify-end pb-24 md:justify-start md:pt-48 md:pb-0">
               <div className="max-w-xl md:text-left text-center">
                 <AnimateOnScroll>
                     <h1 className="text-gradient text-4xl md:text-6xl font-bold font-serif leading-tight mb-6">
@@ -447,7 +447,7 @@ export default function Home() {
                 <AnimateOnScroll>
                     <div className="w-full h-96 rounded-2xl shadow-xl overflow-hidden mb-8">
                         <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.971339180709!2d-38.45934308889953!3d-12.97371199079374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b204e8b0001%3A0x8f2d5c3695d52044!2sCEO%20Salvador%20Shopping!5e0!3m2!1sen!2sbr"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.077595531885!2d-38.44109722585482!3d-12.966779458428135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7161b07223b8c4b%3A0xe349258957434c44!2sR.%20Arthur%20de%20Azev%C3%AAdo%20Machado%2C%201459%20-%20Stiep%2C%20Salvador%20-%20BA%2C%2041770-790!5e0!3m2!1spt-BR!2sbr!4v1725482596489!5m2!1spt-BR!2sbr"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
@@ -464,11 +464,10 @@ export default function Home() {
                             <div>
                                 <h3 className="font-bold text-lg text-foreground">Endereço</h3>
                                 <p className="text-muted-foreground">
-                                    Av. Tancredo Neves, 2539 - Caminho das Árvores, Salvador - BA,
-                                    41820-021
+                                    Rua Arthur de Azevêdo Machado, 1459, Stiep, Salvador BA, 41770-790, Brasil
                                 </p>
                                 <a
-                                    href="https://www.google.com/maps/place/CEO+Salvador+Shopping/@-12.973712,-38.4593431,17z/data=!3m1!4b1!4m6!3m5!1s0x7161b204e8b0001:0x8f2d5c3695d52044!8m2!3d-12.973712!4d-38.4567682!16s%2Fg%2F11b6xl_j_2?entry=ttu"
+                                    href="https://www.google.com/maps/place/R.+Arthur+de+Azev%C3%AAdo+Machado,+1459+-+Stiep,+Salvador+-+BA,+41770-790/@-12.9667795,-38.4410972,17z/data=!3m1!4b1!4m6!3m5!1s0x7161b07223b8c4b:0xe349258957434c44!8m2!3d-12.9667847!4d-38.4385169!16s%2Fg%2F11cs7dy99d?entry=ttu"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-block text-primary font-semibold mt-2 hover:underline"
