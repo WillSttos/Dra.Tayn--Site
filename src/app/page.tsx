@@ -237,7 +237,7 @@ export default function Home() {
                     />
                 )}
             </div>
-            <div className="relative z-10 w-full container mx-auto px-6 flex flex-col flex-grow justify-end pb-24 md:justify-start md:pt-48 md:pb-0">
+            <div className="relative z-10 w-full container mx-auto px-6 flex flex-col flex-grow justify-center pt-96 pb-24 md:justify-start md:pt-48 md:pb-0">
               <div className="max-w-xl md:text-left text-center">
                 <AnimateOnScroll>
                     <h1 className="text-gradient text-4xl md:text-6xl font-bold font-serif leading-tight mb-6">
@@ -371,7 +371,7 @@ export default function Home() {
                     data-ai-hint={PlaceHolderImages.find(p => p.id === 'dra-tayn-retrato')?.imageHint || ''}
                 />
             </AnimateOnScroll>
-            <div className="md:w-2/3 text-center">
+            <div className="md:w-2/3 text-center md:text-center">
               <AnimateOnScroll direction="right">
                 <p className="font-serif text-primary text-lg">Conheça a especialista</p>
                 <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4">
