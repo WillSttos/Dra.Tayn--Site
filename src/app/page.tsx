@@ -237,7 +237,7 @@ export default function Home() {
                     />
                 )}
             </div>
-            <div className="relative z-10 w-full container mx-auto px-6 flex flex-col flex-grow justify-start pt-[60vh] pb-24 md:justify-start md:pt-48 md:pb-0">
+            <div className="relative z-10 w-full container mx-auto px-6 flex flex-col flex-grow justify-start pt-[50vh] pb-24 md:justify-start md:pt-48 md:pb-0">
               <div className="max-w-xl md:text-left text-center">
                 <AnimateOnScroll>
                     <h1 className="text-gradient text-4xl md:text-6xl font-bold font-serif leading-tight mb-6">
