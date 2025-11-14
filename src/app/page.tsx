@@ -214,7 +214,7 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative w-full h-screen flex items-center justify-center">
+        <section className="relative w-full h-screen flex flex-col items-center justify-center">
             <div className="absolute inset-0">
                 {heroBannerDesktop && (
                     <Image
@@ -237,7 +237,7 @@ export default function Home() {
                     />
                 )}
             </div>
-            <div className="relative z-10 w-full container mx-auto px-6 flex flex-col items-center text-center md:items-start md:text-left md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 mt-auto pb-20 md:pb-0 md:mt-0">
+            <div className="relative z-10 w-full container mx-auto px-6 flex flex-col items-center text-center md:items-start md:text-left mt-auto pb-20 md:pb-0 md:mt-0 md:static md:flex-grow md:justify-center">
               <div className="max-w-xl">
                 <AnimateOnScroll>
                     <h1 className="text-gradient text-4xl md:text-6xl font-bold font-serif leading-tight mb-6">
@@ -554,3 +554,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
