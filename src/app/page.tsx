@@ -151,7 +151,7 @@ export default function Home() {
   const heroBannerMobile = PlaceHolderImages.find(p => p.id === 'hero-banner-mobile');
 
   return (
-    <div className="bg-background font-sans text-foreground antialiased">
+    <div className="bg-background font-sans text-foreground antialiased overflow-x-hidden">
       <header className="bg-white/10 backdrop-blur-lg shadow-lg fixed w-full top-0 z-50">
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/" className="text-xl md:text-2xl font-bold text-secondary font-serif">
@@ -303,7 +303,7 @@ export default function Home() {
               <Button
                 onClick={openWhatsapp}
                 variant="custom"
-                className="custom-btn mt-16 block w-full max-w-md mx-auto px-6 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                className="custom-btn mt-16 block w-full max-w-md mx-auto px-6 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105 whitespace-normal"
               >
                 Quero agendar minha avaliação
               </Button>
@@ -347,7 +347,7 @@ export default function Home() {
                         <Button
                             onClick={openWhatsapp}
                             variant="custom"
-                            className="custom-btn mt-16 block w-full max-w-md mx-auto px-6 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                            className="custom-btn mt-16 block w-full max-w-md mx-auto px-6 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105 whitespace-normal"
                         >
                             Quero agendar minha avaliação
                         </Button>
@@ -556,3 +556,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
