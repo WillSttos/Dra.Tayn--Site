@@ -93,9 +93,13 @@
 
 @layer components {
   .custom-btn {
-    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s, transform 0.3s;
+    @apply transition-transform duration-300;
   }
   .custom-btn:hover {
+    @apply hover:scale-105;
     box-shadow: 0 0 0 5px #ae5e555f;
+  }
+  .custom-btn:active {
+    @apply active:scale-105;
   }
 }

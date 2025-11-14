@@ -151,7 +151,7 @@ export default function Home() {
   const heroBannerMobile = PlaceHolderImages.find(p => p.id === 'hero-banner-mobile');
 
   return (
-    <div className="bg-background font-sans text-foreground antialiased overflow-x-hidden">
+    <div className="bg-background font-sans text-foreground antialiased">
       <header className="bg-white/10 backdrop-blur-lg shadow-lg fixed w-full top-0 z-50">
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/" className="text-xl md:text-2xl font-bold text-secondary font-serif">
@@ -170,7 +170,7 @@ export default function Home() {
           <Button
             onClick={openWhatsapp}
             variant="custom"
-            className="hidden md:flex custom-btn px-6 py-2 rounded-full font-semibold shadow-lg transition-transform duration-300 hover:scale-105 active:scale-105"
+            className="hidden md:flex custom-btn px-6 py-2 rounded-full font-semibold shadow-lg"
           >
             Agende sua Avaliação
           </Button>
@@ -202,7 +202,7 @@ export default function Home() {
                  <Button
                     onClick={openWhatsapp}
                     variant="custom"
-                    className="mt-8 w-full custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-xl transition-transform duration-300 hover:scale-105 active:scale-105"
+                    className="mt-8 w-full custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-xl"
                   >
                     Agendar autoavaliação
                   </Button>
@@ -257,7 +257,7 @@ export default function Home() {
                     <Button
                       onClick={openWhatsapp}
                       variant="custom"
-                      className="custom-btn px-6 py-2 md:px-8 md:py-3 h-auto rounded-full font-bold text-base md:text-lg shadow-xl pulse-button transition-transform duration-300 hover:scale-105 active:scale-105"
+                      className="custom-btn px-6 py-2 md:px-8 md:py-3 h-auto rounded-full font-bold text-base md:text-lg shadow-xl pulse-button"
                     >
                       Agendar autoavaliação
                     </Button>
@@ -303,7 +303,7 @@ export default function Home() {
               <Button
                 onClick={openWhatsapp}
                 variant="custom"
-                className="custom-btn mt-16 inline-block px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105 active:scale-105"
+                className="custom-btn mt-16 inline-block px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg"
               >
                 Quero agendar minha avaliação
               </Button>
@@ -347,7 +347,7 @@ export default function Home() {
                         <Button
                             onClick={openWhatsapp}
                             variant="custom"
-                            className="custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg transition-transform duration-300 hover:scale-105 active:scale-105"
+                            className="custom-btn px-8 py-3 h-auto rounded-full font-bold text-lg shadow-lg"
                         >
                             Eu também quero transformar meu sorriso
                         </Button>
