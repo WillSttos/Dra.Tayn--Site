@@ -371,7 +371,7 @@ export default function Home() {
                     data-ai-hint={PlaceHolderImages.find(p => p.id === 'dra-tayn-retrato')?.imageHint || ''}
                 />
             </AnimateOnScroll>
-            <div className="md:w-2/3">
+            <div className="md:w-2/3 text-center">
               <AnimateOnScroll direction="right">
                 <p className="font-serif text-primary text-lg">Conheça a especialista</p>
                 <h2 className="text-3xl md:text-4xl font-bold font-serif text-foreground mb-4">
@@ -396,9 +396,6 @@ export default function Home() {
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                     cupidatat non proident, sunt in culpa qui officia deserunt mollit
                     anim id est laborum.
-                </p>
-                <p className="font-serif text-4xl text-primary/70 mt-6">
-                    Tayná Magalhães
                 </p>
               </AnimateOnScroll>
             </div>
